@@ -13,6 +13,7 @@
 #import "NSURLProtocolVC.h"
 #import "CCodeTestVC.h"
 #import "SwizzMethodVC.h"
+#import "UIViewAnimationVC.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -41,7 +42,8 @@
                    @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
                    @{@"title":@"C代码测试",@"methodName":@"CCodeTest_viewControllerJump"},
                    @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
-                   @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"}];
+                   @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"},
+                   @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -155,6 +157,16 @@
     
     SwizzMethodVC *swizz = [[SwizzMethodVC alloc] init];
     [self.navigationController pushViewController:swizz animated:YES];
+}
+
+
+/**
+ 动画
+ */
+- (void)animation_viewControllerJump{
+    UIViewAnimationVC *animation = [[UIViewAnimationVC alloc] init];
+    [self.navigationController pushViewController:animation animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

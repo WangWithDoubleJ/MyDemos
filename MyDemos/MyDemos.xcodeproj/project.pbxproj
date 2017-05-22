@@ -31,6 +31,7 @@
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
 		891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */; };
 		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
+		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
 		89B5857E1EADA1F100C1F73D /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 89B585781EADA1F100C1F73D /* private_key.p12 */; };
 		89B5857F1EADA1F100C1F73D /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 89B585791EADA1F100C1F73D /* public_key.der */; };
@@ -178,6 +179,8 @@
 		891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLProtocolVC.m; sourceTree = "<group>"; };
 		891D5DA41EBB2027007605DA /* W_URLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_URLProtocol.h; sourceTree = "<group>"; };
 		891D5DA51EBB2027007605DA /* W_URLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W_URLProtocol.m; sourceTree = "<group>"; };
+		8955A0C21ED2EA2500BE765C /* UIViewAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationVC.h; sourceTree = "<group>"; };
+		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
 		895C94C51ECE870D005B299C /* SwizzMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzMethodVC.m; sourceTree = "<group>"; };
 		89B585781EADA1F100C1F73D /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
 				89FE237D1EC99FFB00AB6AE1 /* C代码复习 */,
 				891D5D981EBADB81007605DA /* NSURLProtocol */,
@@ -459,6 +463,15 @@
 				891D5DA51EBB2027007605DA /* W_URLProtocol.m */,
 			);
 			path = CustomURLProtocol;
+			sourceTree = "<group>";
+		};
+		8955A0C11ED2E9B800BE765C /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				8955A0C21ED2EA2500BE765C /* UIViewAnimationVC.h */,
+				8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */,
+			);
+			path = "动画";
 			sourceTree = "<group>";
 		};
 		895C94C31ECE86EE005B299C /* runtime交换方法实现 */ = {
@@ -678,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
+				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
 				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
