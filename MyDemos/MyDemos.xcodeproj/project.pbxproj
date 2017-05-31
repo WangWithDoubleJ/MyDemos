@@ -48,6 +48,7 @@
 		89B585FC1EADD43600C1F73D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FB1EADD43600C1F73D /* CoreMotion.framework */; };
 		89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FD1EADD53200C1F73D /* libc++.tbd */; };
 		89B586021EADD69D00C1F73D /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B586011EADD69D00C1F73D /* ALViewController.m */; };
+		89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CC58E11EDE96670026365D /* UserNotifications.framework */; };
 		89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +202,8 @@
 		89B585FD1EADD53200C1F73D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		89B586001EADD69D00C1F73D /* ALViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
 		89B586011EADD69D00C1F73D /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
+		89CC58E01EDE711F0026365D /* MyDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDemos.entitlements; sourceTree = "<group>"; };
+		89CC58E11EDE96670026365D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		89FE23841EC9A09A00AB6AE1 /* CCodeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCodeTestVC.h; sourceTree = "<group>"; };
 		89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCodeTestVC.m; sourceTree = "<group>"; };
 		F2FAA875D01D050FE9EAE66B /* libPods-MyDemos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDemos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */,
 				890CD8CC1EB82305007B1169 /* libFMDB.a in Frameworks */,
 				89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */,
 				89B585FC1EADD43600C1F73D /* CoreMotion.framework in Frameworks */,
@@ -272,6 +276,8 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
+				89CC58DF1EDE6AC40026365D /* 远程推送 */,
 				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
 				89FE237D1EC99FFB00AB6AE1 /* C代码复习 */,
@@ -312,6 +318,7 @@
 		890E44781EA89C9600EB2BC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89CC58E11EDE96670026365D /* UserNotifications.framework */,
 				890CD8CB1EB82305007B1169 /* libFMDB.a */,
 				89B585FD1EADD53200C1F73D /* libc++.tbd */,
 				89B585FB1EADD43600C1F73D /* CoreMotion.framework */,
@@ -514,6 +521,13 @@
 			path = WJ_ALCustomFlies;
 			sourceTree = "<group>";
 		};
+		89CC58DF1EDE6AC40026365D /* 远程推送 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "远程推送";
+			sourceTree = "<group>";
+		};
 		89FE237D1EC99FFB00AB6AE1 /* C代码复习 */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,8 +598,13 @@
 				TargetAttributes = {
 					890E44491EA89B5B00EB2BC2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = K572TRU4M6;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = YL28P9476M;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					890E44621EA89B5B00EB2BC2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -845,9 +864,10 @@
 			baseConfigurationReference = 62CC227301B09FBDA2727789 /* Pods-MyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyDemos/MyDemos.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K572TRU4M6;
+				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyDemos/支付宝",
@@ -862,10 +882,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.MyDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.demopush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "132c79c4-d015-4e07-a483-657a923de484";
+				PROVISIONING_PROFILE_SPECIFIER = Demospushprofile;
 			};
 			name = Debug;
 		};
@@ -874,9 +894,10 @@
 			baseConfigurationReference = 2C9F9B3CE9DC7E2C69313987 /* Pods-MyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyDemos/MyDemos.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K572TRU4M6;
+				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyDemos/支付宝",
@@ -891,10 +912,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.MyDemos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.demopush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "132c79c4-d015-4e07-a483-657a923de484";
+				PROVISIONING_PROFILE_SPECIFIER = Demospushprofile;
 			};
 			name = Release;
 		};

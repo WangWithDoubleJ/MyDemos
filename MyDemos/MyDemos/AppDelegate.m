@@ -10,7 +10,10 @@
 #import "ViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "W_URLProtocol.h"
-@interface AppDelegate ()
+#import <UserNotifications/UserNotifications.h>
+
+
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -22,17 +25,33 @@
     UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     self.window.rootViewController = vc;
     
-    
     //1.NSURLProtocoldemo需要在APPdelegate中注册自定义protocol类
     [NSURLProtocol registerClass:[W_URLProtocol class]];
-    
-    
-    
-    
-    
-    
-    
-    
+
+    //远程推送功测试
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];        //点击通知开启引用后清除图标角标数字
+    if ([[UIDevice currentDevice].systemVersion floatValue] >=10.0) {           //10.0以上系统推送实现
+        
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:UNAuthorizationOptionBadge|UNAuthorizationOptionSound|UNAuthorizationOptionAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                NSLog(@"iOS 10 request notification success");
+            }else{
+                NSLog(@"iOS 10 request notification fail");
+            }
+        }];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+    }else if([[UIDevice currentDevice].systemVersion floatValue] >= 8.0){       //8.0以上系统实现
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+    }else{                                                                      //7.0系统
+        UIRemoteNotificationType type = UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:type];
+    }
+
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -87,5 +106,75 @@
     return YES;
 }
 
+
+#pragma mark - 8.0远程推送代理
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken{
+    
+    NSString *deviceTokenStr = [deviceToken description];
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@">" withString:@""];
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    NSLog(@"deviceTokenStr = %@",deviceTokenStr);
+    [[NSUserDefaults standardUserDefaults] setObject:deviceTokenStr forKey:@"deviceToken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+    
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo{
+    NSLog(@"userInfo = %@",userInfo);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"error = %@",error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    NSLog(@"error = %@",userInfo);
+}
+
+#pragma mark - 10.0远程推送代理方法
+//APP在前台的时候收到推送的回调
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    
+    //收到消息badge+1
+    
+    
+    UNNotificationContent *content = notification.request.content;
+    NSDictionary *userInfo = content.userInfo;
+    
+//    NSInteger badgeCatch = [[[NSUserDefaults standardUserDefaults] objectForKey:@"badge"] integerValue] + [[userInfo objectForKey:@"badge"] integerValue];
+//    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",badgeCatch] forKey:@"badge"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCatch];        //点击通知开启引用后清除图标角标数字
+    
+    [self handleRemoteNotificationContent:userInfo];
+    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
+    
+ 
+    
+}
+
+//APP在后台，点击推送信息进入APP后执行的回调
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    
+    UNNotificationContent *cotent = response.notification.request.content;
+    NSDictionary *userInfo = cotent.userInfo;
+    
+    
+    //点击通知开启引用后清除图标角标数字
+    NSInteger badgeX = [UIApplication sharedApplication].applicationIconBadgeNumber;
+    if ([UIApplication sharedApplication].applicationIconBadgeNumber > 0) {
+        [userInfo setValue:[NSString stringWithFormat:@"%ld",badgeX-1] forKey:@"badge"];
+    }else{
+        [userInfo setValue:[NSString stringWithFormat:@"0"] forKey:@"badge"];
+    }
+    
+    [self handleRemoteNotificationContent:userInfo];
+    completionHandler();
+}
+
+- (void)handleRemoteNotificationContent:(NSDictionary *)userInfo{
+    NSLog(@" iOS 10 after Notificatoin message:\n %@",userInfo);
+}
 
 @end
