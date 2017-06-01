@@ -29,7 +29,6 @@
     [NSURLProtocol registerClass:[W_URLProtocol class]];
 
     //远程推送功测试
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];        //点击通知开启引用后清除图标角标数字
     if ([[UIDevice currentDevice].systemVersion floatValue] >=10.0) {           //10.0以上系统推送实现
         
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -76,7 +75,7 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];        //点击通知开启引用后清除图标角标数字
 }
 
 
@@ -137,20 +136,12 @@
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
     
     //收到消息badge+1
-    
-    
     UNNotificationContent *content = notification.request.content;
     NSDictionary *userInfo = content.userInfo;
-    
-//    NSInteger badgeCatch = [[[NSUserDefaults standardUserDefaults] objectForKey:@"badge"] integerValue] + [[userInfo objectForKey:@"badge"] integerValue];
-//    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",badgeCatch] forKey:@"badge"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badgeCatch];        //点击通知开启引用后清除图标角标数字
-    
     [self handleRemoteNotificationContent:userInfo];
-    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
-    
- 
+    NSInteger x = [UIApplication sharedApplication].applicationIconBadgeNumber;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = x +1;
+ //    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);  //前台时不做消息弹框处理。可以做自定义弹框或者消息badge的首页展示等效果
     
 }
 
@@ -160,17 +151,24 @@
     UNNotificationContent *cotent = response.notification.request.content;
     NSDictionary *userInfo = cotent.userInfo;
     
-    
     //点击通知开启引用后清除图标角标数字
     NSInteger badgeX = [UIApplication sharedApplication].applicationIconBadgeNumber;
     if ([UIApplication sharedApplication].applicationIconBadgeNumber > 0) {
-        [userInfo setValue:[NSString stringWithFormat:@"%ld",badgeX-1] forKey:@"badge"];
+        [UIApplication sharedApplication].applicationIconBadgeNumber = badgeX-1;
+        
     }else{
-        [userInfo setValue:[NSString stringWithFormat:@"0"] forKey:@"badge"];
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     }
     
     [self handleRemoteNotificationContent:userInfo];
     completionHandler();
+    
+    /**
+     应用在后台时，push推送的数量累加操作由后端执行
+     当应用开启状态时，推送数量根据用户点击打开对应的消息，标记后发送后台，后台根据标记做对应的数据累加处理用于后台状态的角标操作。前端则缓存消息数量做对应的角标加减；
+     */
+    
+    
 }
 
 - (void)handleRemoteNotificationContent:(NSDictionary *)userInfo{
