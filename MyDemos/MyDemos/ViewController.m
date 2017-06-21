@@ -14,6 +14,7 @@
 #import "CCodeTestVC.h"
 #import "SwizzMethodVC.h"
 #import "UIViewAnimationVC.h"
+#import "MaiDianViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -43,7 +44,8 @@
                    @{@"title":@"C代码测试",@"methodName":@"CCodeTest_viewControllerJump"},
                    @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
                    @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"},
-                   @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"}];
+                   @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"},
+                   @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -166,7 +168,15 @@
 - (void)animation_viewControllerJump{
     UIViewAnimationVC *animation = [[UIViewAnimationVC alloc] init];
     [self.navigationController pushViewController:animation animated:YES];
-    
+}
+
+
+/**
+ 埋点实现
+ */
+- (void)maidian_viewControllerJump{
+    MaiDianViewController *maidian = [[MaiDianViewController alloc] init];
+    [self.navigationController pushViewController:maidian animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

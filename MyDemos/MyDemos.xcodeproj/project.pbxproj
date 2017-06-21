@@ -33,6 +33,8 @@
 		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
+		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
+		897895941EFA4DD300623896 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895931EFA4DD300623896 /* LogManager.m */; };
 		89B5857E1EADA1F100C1F73D /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 89B585781EADA1F100C1F73D /* private_key.p12 */; };
 		89B5857F1EADA1F100C1F73D /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 89B585791EADA1F100C1F73D /* public_key.der */; };
 		89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B5857B1EADA1F100C1F73D /* RSAEncryptor.m */; };
@@ -184,6 +186,10 @@
 		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
 		895C94C51ECE870D005B299C /* SwizzMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzMethodVC.m; sourceTree = "<group>"; };
+		8978958A1EFA439500623896 /* MaiDianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianViewController.h; sourceTree = "<group>"; };
+		8978958B1EFA439500623896 /* MaiDianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiDianViewController.m; sourceTree = "<group>"; };
+		897895921EFA4DD300623896 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		897895931EFA4DD300623896 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		89B585781EADA1F100C1F73D /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
 		89B585791EADA1F100C1F73D /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 		89B5857A1EADA1F100C1F73D /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
+				897895891EFA42F200623896 /* 埋点实现 */,
 				89CC58DF1EDE6AC40026365D /* 远程推送 */,
 				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
@@ -488,6 +495,41 @@
 				895C94C51ECE870D005B299C /* SwizzMethodVC.m */,
 			);
 			path = "runtime交换方法实现";
+			sourceTree = "<group>";
+		};
+		897895891EFA42F200623896 /* 埋点实现 */ = {
+			isa = PBXGroup;
+			children = (
+				897895951EFA5E6A00623896 /* Category */,
+				897895911EFA4DBC00623896 /* Manager */,
+				8978958D1EFA4D6200623896 /* Utils */,
+				8978958A1EFA439500623896 /* MaiDianViewController.h */,
+				8978958B1EFA439500623896 /* MaiDianViewController.m */,
+			);
+			path = "埋点实现";
+			sourceTree = "<group>";
+		};
+		8978958D1EFA4D6200623896 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		897895911EFA4DBC00623896 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				897895921EFA4DD300623896 /* LogManager.h */,
+				897895931EFA4DD300623896 /* LogManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		897895951EFA5E6A00623896 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		89B585771EADA1F100C1F73D /* RSA加密 */ = {
@@ -709,6 +751,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897895941EFA4DD300623896 /* LogManager.m in Sources */,
+				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
 				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
 				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
