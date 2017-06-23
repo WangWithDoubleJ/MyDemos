@@ -31,6 +31,8 @@
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
 		891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */; };
 		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
+		893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */; };
+		893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
 		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
@@ -183,6 +185,9 @@
 		891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLProtocolVC.m; sourceTree = "<group>"; };
 		891D5DA41EBB2027007605DA /* W_URLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_URLProtocol.h; sourceTree = "<group>"; };
 		891D5DA51EBB2027007605DA /* W_URLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W_URLProtocol.m; sourceTree = "<group>"; };
+		893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+LWSwizzle.h"; sourceTree = "<group>"; };
+		893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+LWSwizzle.m"; sourceTree = "<group>"; };
+		893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LWLogInfo.plist; sourceTree = "<group>"; };
 		8955A0C21ED2EA2500BE765C /* UIViewAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationVC.h; sourceTree = "<group>"; };
 		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
@@ -482,6 +487,14 @@
 			path = CustomURLProtocol;
 			sourceTree = "<group>";
 		};
+		893A81EE1EFCC897003A2D14 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		8955A0C11ED2E9B800BE765C /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +516,7 @@
 		897895891EFA42F200623896 /* 埋点实现 */ = {
 			isa = PBXGroup;
 			children = (
+				893A81EE1EFCC897003A2D14 /* resources */,
 				897895951EFA5E6A00623896 /* Category */,
 				897895911EFA4DBC00623896 /* Manager */,
 				8978958D1EFA4D6200623896 /* Utils */,
@@ -533,6 +547,8 @@
 		897895951EFA5E6A00623896 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */,
+				893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -685,6 +701,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */,
 				890FBA701EB040A800C10AE5 /* AlipaySDK.bundle in Resources */,
 				890E445D1EA89B5B00EB2BC2 /* LaunchScreen.storyboard in Resources */,
 				890E445A1EA89B5B00EB2BC2 /* Assets.xcassets in Resources */,
@@ -776,6 +793,7 @@
 				890CD8CA1EB81D03007B1169 /* FMDBTestVC.m in Sources */,
 				890E44521EA89B5B00EB2BC2 /* AppDelegate.m in Sources */,
 				890E444F1EA89B5B00EB2BC2 /* main.m in Sources */,
+				893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */,
 				895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */,
 				897895981EFBB51500623896 /* LWSwizzleTool.m in Sources */,
 			);
