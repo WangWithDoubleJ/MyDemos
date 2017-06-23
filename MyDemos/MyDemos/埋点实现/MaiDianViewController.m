@@ -19,6 +19,8 @@
 
 @implementation MaiDianViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,8 +32,6 @@
  配置UI
  */
 - (void)UIConfig{
-    
-    
     
     
 }
