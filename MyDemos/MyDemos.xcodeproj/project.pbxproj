@@ -313,6 +313,7 @@
 				890CD8C71EB81CDD007B1169 /* FMDB */,
 				89B585821EADA25B00C1F73D /* 支付宝 */,
 				89B585771EADA1F100C1F73D /* RSA加密 */,
+				893C93171F02A34000303C01 /* 国际化 */,
 				890E44501EA89B5B00EB2BC2 /* AppDelegate.h */,
 				890E44511EA89B5B00EB2BC2 /* AppDelegate.m */,
 				890E44531EA89B5B00EB2BC2 /* ViewController.h */,
@@ -542,6 +543,13 @@
 				893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		893C93171F02A34000303C01 /* 国际化 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "国际化";
 			sourceTree = "<group>";
 		};
 		8955A0C11ED2E9B800BE765C /* 动画 */ = {

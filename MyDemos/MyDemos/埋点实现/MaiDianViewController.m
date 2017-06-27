@@ -31,7 +31,10 @@
 
     
 }
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+}
 #pragma mark - btn点击埋点记录
 
 - (void)btnConfig{

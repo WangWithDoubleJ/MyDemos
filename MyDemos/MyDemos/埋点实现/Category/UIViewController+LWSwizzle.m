@@ -19,10 +19,12 @@
 }
 
 - (void)lw_viewDidAppear:(BOOL)animated{
-    
-    
-    
     [self lw_viewDidAppear:animated];
+    
+    
+    
+    
+    
 }
 
 @end
