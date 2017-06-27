@@ -13,7 +13,7 @@
 
 #import "MaiDianViewController.h"
 
-@interface MaiDianViewController ()
+@interface MaiDianViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -24,19 +24,84 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self UIConfig];
+    [self btnConfig];
+    
+    [self tableViewConfig];
     
 
     
 }
 
-/**
- 配置UI
- */
-- (void)UIConfig{
+#pragma mark - btn点击埋点记录
+
+- (void)btnConfig{
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSArray *titleArr = @[@{@"title":@"leftBtn",@"selector":@"runtimeLeftAction:"},
+                          @{@"title":@"middleBtn",@"selector":@"runtimeMiddleAction:"},
+                          @{@"title":@"rightBtn",@"selector":@"runtimeRightAction:"}];
+    
+    NSInteger margin = CMScale(20.0);
+    NSInteger btnW = (kLWScreenW - (titleArr.count+1)*margin)/titleArr.count;
+    
+    for (int i = 0; i<titleArr.count; i++) {
+        
+        NSDictionary *btnInfo = titleArr[i];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setTitle:btnInfo[@"title"] forState:UIControlStateNormal];
+        SEL selector = NSSelectorFromString(btnInfo[@"selector"]);
+        [btn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+        btn.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+        [self.view addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(margin+64);
+            make.left.mas_equalTo(margin*(i+1)+btnW*i);
+            make.width.mas_equalTo(btnW);
+            make.height.mas_equalTo(CMScale(40));            
+        }];
+    }
+}
+
+-(void)runtimeLeftAction:(UIButton *)btn{
+
+}
+-(void)runtimeMiddleAction:(UIButton *)btn{
     
 }
+-(void)runtimeRightAction:(UIButton *)btn{
+    
+}
+
+
+#pragma mark - cell点击埋点记录
+
+- (void)tableViewConfig{
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
+
+#pragma mark - 手势点击埋点记录
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

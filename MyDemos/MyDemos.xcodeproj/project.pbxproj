@@ -31,6 +31,9 @@
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
 		891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */; };
 		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
+		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
+		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
+		892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */; };
 		893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */; };
 		893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
@@ -185,6 +188,14 @@
 		891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLProtocolVC.m; sourceTree = "<group>"; };
 		891D5DA41EBB2027007605DA /* W_URLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_URLProtocol.h; sourceTree = "<group>"; };
 		891D5DA51EBB2027007605DA /* W_URLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W_URLProtocol.m; sourceTree = "<group>"; };
+		8928D4851F00EE6D0006DFC9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8928D4871F00F2220006DFC9 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		8928D4891F0108990006DFC9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		8928D48A1F0108990006DFC9 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		892E7CB91F01F104006C7106 /* UIConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigManager.h; sourceTree = "<group>"; };
+		892E7CBA1F01F104006C7106 /* UIConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigManager.m; sourceTree = "<group>"; };
+		892E7CBD1F0245B2006C7106 /* MaiDianDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianDataModel.h; sourceTree = "<group>"; };
+		892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiDianDataModel.m; sourceTree = "<group>"; };
 		893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+LWSwizzle.h"; sourceTree = "<group>"; };
 		893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+LWSwizzle.m"; sourceTree = "<group>"; };
 		893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LWLogInfo.plist; sourceTree = "<group>"; };
@@ -292,7 +303,6 @@
 			children = (
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
 				897895891EFA42F200623896 /* 埋点实现 */,
-				89CC58DF1EDE6AC40026365D /* 远程推送 */,
 				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
 				89FE237D1EC99FFB00AB6AE1 /* C代码复习 */,
@@ -308,6 +318,8 @@
 				890E44591EA89B5B00EB2BC2 /* Assets.xcassets */,
 				890E445B1EA89B5B00EB2BC2 /* LaunchScreen.storyboard */,
 				890E445E1EA89B5B00EB2BC2 /* Info.plist */,
+				8928D4861F00F1C60006DFC9 /* Define */,
+				892E7CB51F01EE87006C7106 /* Utils */,
 				890E444D1EA89B5B00EB2BC2 /* Supporting Files */,
 			);
 			path = MyDemos;
@@ -317,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				890E444E1EA89B5B00EB2BC2 /* main.m */,
+				8928D4851F00EE6D0006DFC9 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -487,6 +500,39 @@
 			path = CustomURLProtocol;
 			sourceTree = "<group>";
 		};
+		8928D4861F00F1C60006DFC9 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				8928D4871F00F2220006DFC9 /* Global.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		8928D4881F0107D30006DFC9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		892E7CB51F01EE87006C7106 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				892E7CB91F01F104006C7106 /* UIConfigManager.h */,
+				892E7CBA1F01F104006C7106 /* UIConfigManager.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		892E7CBC1F024594006C7106 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				892E7CBD1F0245B2006C7106 /* MaiDianDataModel.h */,
+				892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		893A81EE1EFCC897003A2D14 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +562,8 @@
 		897895891EFA42F200623896 /* 埋点实现 */ = {
 			isa = PBXGroup;
 			children = (
+				892E7CBC1F024594006C7106 /* Models */,
+				8928D4881F0107D30006DFC9 /* Request */,
 				893A81EE1EFCC897003A2D14 /* resources */,
 				897895951EFA5E6A00623896 /* Category */,
 				897895911EFA4DBC00623896 /* Manager */,
@@ -540,6 +588,8 @@
 			children = (
 				897895921EFA4DD300623896 /* LogManager.h */,
 				897895931EFA4DD300623896 /* LogManager.m */,
+				8928D4891F0108990006DFC9 /* RequestManager.h */,
+				8928D48A1F0108990006DFC9 /* RequestManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -582,13 +632,6 @@
 				89B586011EADD69D00C1F73D /* ALViewController.m */,
 			);
 			path = WJ_ALCustomFlies;
-			sourceTree = "<group>";
-		};
-		89CC58DF1EDE6AC40026365D /* 远程推送 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "远程推送";
 			sourceTree = "<group>";
 		};
 		89FE237D1EC99FFB00AB6AE1 /* C代码复习 */ = {
@@ -776,6 +819,8 @@
 				897895941EFA4DD300623896 /* LogManager.m in Sources */,
 				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
+				892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */,
+				892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */,
 				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
 				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
@@ -788,6 +833,7 @@
 				890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */,
 				890FBA781EB040A800C10AE5 /* RSADataSigner.m in Sources */,
 				890FBA771EB040A800C10AE5 /* openssl_wrapper.m in Sources */,
+				8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */,
 				891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */,
 				890FBA741EB040A800C10AE5 /* Order.m in Sources */,
 				890CD8CA1EB81D03007B1169 /* FMDBTestVC.m in Sources */,
@@ -941,6 +987,8 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝",
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/pingankeji/MyDemos/MyDemos/MyDemos/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK";
 				INFOPLIST_FILE = MyDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -971,6 +1019,8 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝",
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/pingankeji/MyDemos/MyDemos/MyDemos/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK";
 				INFOPLIST_FILE = MyDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -8,6 +8,7 @@
 
 #import "UIControl+LWSwizzle.h"
 #import "LWSwizzleTool.h"
+#import "MaiDianDataModel.h"
 
 @implementation UIControl (LWSwizzle)
 
@@ -21,15 +22,28 @@
 }
 
 - (void)lw_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
+    //这里实际调用的是系统方法
+    [self lw_sendAction:action to:target forEvent:event];
     
     NSString *selName =  NSStringFromSelector(action);
     NSString *clsName = NSStringFromClass([target class]);
+    NSString *pathString = [[NSBundle mainBundle] pathForResource:@"LWLogInfo" ofType:@"plist"];
+    NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:pathString];
+    NSDictionary *controllerDict = [plistDict objectForKey:clsName];
+    NSArray *pamas = [controllerDict objectForKey:selName];
     
+    //获取对应字段名的值，并作为参数上传服务器
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    MaiDianDataModel *model = [[MaiDianDataModel alloc] init];
+    for (NSString *pama in pamas) {
+        SEL dataSelector = NSSelectorFromString(pama);
+        id value = [model performSelector:dataSelector withObject:nil];
+        if(value){
+          [dic setObject:value forKey:pama];
+        }
+    }
+    [RequestManager requestForLogs:dic];
     
-    
-    
-    //这里实际调用的是系统方法
-    [self lw_sendAction:action to:target forEvent:event];
 }
 
 @end
