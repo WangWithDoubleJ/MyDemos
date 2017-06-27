@@ -5,5 +5,5 @@ pod ‘MBProgressHUD’, ‘0.8’
 pod ‘FMDB’, ‘2.6.2’
 pod 'AFNetworking','3.1.0'
 pod 'Masonry', '1.0.2'
-pod 'Aspects'
+
 end
