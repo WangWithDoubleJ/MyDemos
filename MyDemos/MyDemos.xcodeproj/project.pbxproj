@@ -34,6 +34,7 @@
 		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
 		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
 		892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */; };
+		892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */; };
 		893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */; };
 		893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
@@ -196,6 +197,8 @@
 		892E7CBA1F01F104006C7106 /* UIConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigManager.m; sourceTree = "<group>"; };
 		892E7CBD1F0245B2006C7106 /* MaiDianDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianDataModel.h; sourceTree = "<group>"; };
 		892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiDianDataModel.m; sourceTree = "<group>"; };
+		892E7CC01F026E82006C7106 /* UIViewController+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LWSwizzle.h"; sourceTree = "<group>"; };
+		892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LWSwizzle.m"; sourceTree = "<group>"; };
 		893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+LWSwizzle.h"; sourceTree = "<group>"; };
 		893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+LWSwizzle.m"; sourceTree = "<group>"; };
 		893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LWLogInfo.plist; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 			children = (
 				893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */,
 				893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */,
+				892E7CC01F026E82006C7106 /* UIViewController+LWSwizzle.h */,
+				892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */,
 				891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */,
 				890FBA741EB040A800C10AE5 /* Order.m in Sources */,
+				892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */,
 				890CD8CA1EB81D03007B1169 /* FMDBTestVC.m in Sources */,
 				890E44521EA89B5B00EB2BC2 /* AppDelegate.m in Sources */,
 				890E444F1EA89B5B00EB2BC2 /* main.m in Sources */,

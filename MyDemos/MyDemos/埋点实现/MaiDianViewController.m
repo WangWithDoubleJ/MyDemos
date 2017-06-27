@@ -31,7 +31,7 @@
 
     
 }
-
+- (void)viewDidAppear:(BOOL)animated
 #pragma mark - btn点击埋点记录
 
 - (void)btnConfig{
