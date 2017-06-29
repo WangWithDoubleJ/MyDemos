@@ -16,6 +16,7 @@
 #import "UIViewAnimationVC.h"
 #import "MaiDianViewController.h"
 #import "CSViewController.h"
+#import "LWTableBarVC.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -47,7 +48,8 @@
                    @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"},
                    @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"},
                    @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"},
-                   @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"}];
+                   @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"},
+                   @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -185,6 +187,12 @@
     CSViewController *csvc = [[CSViewController alloc] init];
     [self.navigationController pushViewController:csvc animated:YES];
 }
+
+-(void)tabBarVC_viewControllerJump{
+    LWTableBarVC *vc = [[LWTableBarVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

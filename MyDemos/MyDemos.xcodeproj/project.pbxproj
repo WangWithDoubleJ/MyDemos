@@ -32,6 +32,7 @@
 		891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */; };
 		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
 		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
+		892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C46421F054605003B6E4B /* LWTableBarVC.m */; };
 		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
 		892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */; };
 		892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */; };
@@ -195,6 +196,8 @@
 		8928D4871F00F2220006DFC9 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8928D4891F0108990006DFC9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		8928D48A1F0108990006DFC9 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		892C46411F054605003B6E4B /* LWTableBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWTableBarVC.h; sourceTree = "<group>"; };
+		892C46421F054605003B6E4B /* LWTableBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWTableBarVC.m; sourceTree = "<group>"; };
 		892E7CB91F01F104006C7106 /* UIConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigManager.h; sourceTree = "<group>"; };
 		892E7CBA1F01F104006C7106 /* UIConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfigManager.m; sourceTree = "<group>"; };
 		892E7CBD1F0245B2006C7106 /* MaiDianDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianDataModel.h; sourceTree = "<group>"; };
@@ -321,6 +324,7 @@
 				89B585821EADA25B00C1F73D /* 支付宝 */,
 				89B585771EADA1F100C1F73D /* RSA加密 */,
 				893C93171F02A34000303C01 /* 国际化 */,
+				892C46401F0545D8003B6E4B /* UITabBarController */,
 				890E44501EA89B5B00EB2BC2 /* AppDelegate.h */,
 				890E44511EA89B5B00EB2BC2 /* AppDelegate.m */,
 				890E44531EA89B5B00EB2BC2 /* ViewController.h */,
@@ -524,6 +528,15 @@
 			children = (
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		892C46401F0545D8003B6E4B /* UITabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				892C46411F054605003B6E4B /* LWTableBarVC.h */,
+				892C46421F054605003B6E4B /* LWTableBarVC.m */,
+			);
+			path = UITabBarController;
 			sourceTree = "<group>";
 		};
 		892E7CB51F01EE87006C7106 /* Utils */ = {
@@ -855,6 +868,7 @@
 				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
 				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
+				892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
