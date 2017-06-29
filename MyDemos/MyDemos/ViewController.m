@@ -15,6 +15,7 @@
 #import "SwizzMethodVC.h"
 #import "UIViewAnimationVC.h"
 #import "MaiDianViewController.h"
+#import "CSViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -45,7 +46,8 @@
                    @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
                    @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"},
                    @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"},
-                   @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"}];
+                   @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"},
+                   @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -177,6 +179,11 @@
 - (void)maidian_viewControllerJump{
     MaiDianViewController *maidian = [[MaiDianViewController alloc] init];
     [self.navigationController pushViewController:maidian animated:YES];
+}
+
+-(void)CSDiff_viewControllerJump{
+    CSViewController *csvc = [[CSViewController alloc] init];
+    [self.navigationController pushViewController:csvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

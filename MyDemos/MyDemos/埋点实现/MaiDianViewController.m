@@ -12,6 +12,7 @@
  */
 
 #import "MaiDianViewController.h"
+#import "LWSwizzleTool.h"
 
 @interface MaiDianViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -24,6 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    int a[5] = {1, 2, 3, 4, 5};
+//    int *ptr = (int *)(&a + 1);
+//    printf("%d, %d", *(a + 1), *(ptr + 1));
+    
+  
     [self btnConfig];
     
     [self tableViewConfig];
@@ -35,6 +41,7 @@
     [super viewDidAppear:animated];
     
 }
+
 #pragma mark - btn点击埋点记录
 
 - (void)btnConfig{

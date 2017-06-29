@@ -14,8 +14,16 @@
  1.class_getClassMethod()获取的是类方法,class_getInstanceMethod()才是获取的实例方法
  2.在下面使用class_addMethod()添加判断：如果添加成功说明需要替换的是不同名方法，需要通过 class_replaceMethod()函数替换方法实现，如果是同名方法，则直接交换方法指针指向即可。
  */
+@interface LWSwizzleTool()
+
+@end
+
 
 @implementation LWSwizzleTool
+
+- (void)setSss:(NSString *)sss{
+    _sss = sss;
+}
 
 + (void)lw_swizzleWithClass:(Class)prosessedClass originalSelector:(SEL)originalSelector swizzleSelector:(SEL)swizzleSelector{
     

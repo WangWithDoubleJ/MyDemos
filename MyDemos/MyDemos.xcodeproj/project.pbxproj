@@ -37,6 +37,7 @@
 		892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */; };
 		893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */; };
 		893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */; };
+		89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471F7A1F03B08C000F04DA /* CSViewController.m */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
 		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
@@ -202,6 +203,8 @@
 		893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+LWSwizzle.h"; sourceTree = "<group>"; };
 		893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+LWSwizzle.m"; sourceTree = "<group>"; };
 		893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LWLogInfo.plist; sourceTree = "<group>"; };
+		89471F791F03B08C000F04DA /* CSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSViewController.h; sourceTree = "<group>"; };
+		89471F7A1F03B08C000F04DA /* CSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSViewController.m; sourceTree = "<group>"; };
 		8955A0C21ED2EA2500BE765C /* UIViewAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationVC.h; sourceTree = "<group>"; };
 		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
+				89471F781F03B056000F04DA /* copy和strong的区别 */,
 				897895891EFA42F200623896 /* 埋点实现 */,
 				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
@@ -550,6 +554,15 @@
 			children = (
 			);
 			path = "国际化";
+			sourceTree = "<group>";
+		};
+		89471F781F03B056000F04DA /* copy和strong的区别 */ = {
+			isa = PBXGroup;
+			children = (
+				89471F791F03B08C000F04DA /* CSViewController.h */,
+				89471F7A1F03B08C000F04DA /* CSViewController.m */,
+			);
+			path = "copy和strong的区别";
 			sourceTree = "<group>";
 		};
 		8955A0C11ED2E9B800BE765C /* 动画 */ = {
@@ -839,6 +852,7 @@
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
+				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
 				890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */,
 				89B585811EADA1F100C1F73D /* RSAEncryptorVC.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,

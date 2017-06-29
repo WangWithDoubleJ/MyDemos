@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface LWSwizzleTool : NSObject
+@property (nonatomic, strong,readonly) NSString *sss;
 
 + (void)lw_swizzleWithClass:(Class)prosessedClass originalSelector:(SEL)originalSelector swizzleSelector:(SEL)swizzleSelector;
 
