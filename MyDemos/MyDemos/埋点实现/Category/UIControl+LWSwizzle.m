@@ -30,14 +30,17 @@
     NSString *pathString = [[NSBundle mainBundle] pathForResource:@"LWLogInfo" ofType:@"plist"];
     NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:pathString];
     NSDictionary *controllerDict = [plistDict objectForKey:clsName];
-    NSArray *pamas = [controllerDict objectForKey:selName];
+    
+    //如果该类不在埋点配置表内则无需请求网络上传Log
+    if (!controllerDict) return;
     
     //获取对应字段名的值，并作为参数上传服务器
+    NSArray *pamas = [controllerDict objectForKey:selName];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     MaiDianDataModel *model = [[MaiDianDataModel alloc] init];
     for (NSString *pama in pamas) {
         SEL dataSelector = NSSelectorFromString(pama);
-        id value = [model performSelector:dataSelector withObject:nil];
+        id value = [model performSelector:dataSelector withObject:nil];//调用model的get方法获取对应参数的值
         if(value){
           [dic setObject:value forKey:pama];
         }

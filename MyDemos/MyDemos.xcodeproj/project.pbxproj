@@ -59,6 +59,7 @@
 		89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FD1EADD53200C1F73D /* libc++.tbd */; };
 		89B586021EADD69D00C1F73D /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B586011EADD69D00C1F73D /* ALViewController.m */; };
 		89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CC58E11EDE96670026365D /* UserNotifications.framework */; };
+		89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FC4E451F04D56900D81B65 /* UIButton+Addition.m */; };
 		89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +236,8 @@
 		89B586011EADD69D00C1F73D /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
 		89CC58E01EDE711F0026365D /* MyDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDemos.entitlements; sourceTree = "<group>"; };
 		89CC58E11EDE96670026365D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		89FC4E441F04D56900D81B65 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
+		89FC4E451F04D56900D81B65 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
 		89FE23841EC9A09A00AB6AE1 /* CCodeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCodeTestVC.h; sourceTree = "<group>"; };
 		89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCodeTestVC.m; sourceTree = "<group>"; };
 		F2FAA875D01D050FE9EAE66B /* libPods-MyDemos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDemos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -625,6 +628,8 @@
 				893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */,
 				892E7CC01F026E82006C7106 /* UIViewController+LWSwizzle.h */,
 				892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */,
+				89FC4E441F04D56900D81B65 /* UIButton+Addition.h */,
+				89FC4E451F04D56900D81B65 /* UIButton+Addition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -870,6 +875,7 @@
 				893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */,
 				895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */,
 				897895981EFBB51500623896 /* LWSwizzleTool.m in Sources */,
+				89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

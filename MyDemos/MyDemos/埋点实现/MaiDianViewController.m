@@ -48,39 +48,21 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *titleArr = @[@{@"title":@"leftBtn",@"selector":@"runtimeLeftAction:"},
-                          @{@"title":@"middleBtn",@"selector":@"runtimeMiddleAction:"},
-                          @{@"title":@"rightBtn",@"selector":@"runtimeRightAction:"}];
+    NSArray *titleArr = @[@{@"title":@"leftBtn",@"selector":@"runtimeLeftControlAction:"},
+                          @{@"title":@"middleBtn",@"selector":@"runtimeMiddleControlAction:"},
+                          @{@"title":@"rightBtn",@"selector":@"runtimeRightControlAction:"}];
+    [self addButtonsWithArray:titleArr top:64];
     
-    NSInteger margin = CMScale(20.0);
-    NSInteger btnW = (kLWScreenW - (titleArr.count+1)*margin)/titleArr.count;
+}
+
+-(void)runtimeLeftControlAction:(UIButton *)btn{
     
-    for (int i = 0; i<titleArr.count; i++) {
+}
+-(void)runtimeMiddleControlAction:(UIButton *)btn{
+    
+}
+-(void)runtimeRightControlAction:(UIButton *)btn{
         
-        NSDictionary *btnInfo = titleArr[i];
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:btnInfo[@"title"] forState:UIControlStateNormal];
-        SEL selector = NSSelectorFromString(btnInfo[@"selector"]);
-        [btn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
-        btn.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
-        [self.view addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(margin+64);
-            make.left.mas_equalTo(margin*(i+1)+btnW*i);
-            make.width.mas_equalTo(btnW);
-            make.height.mas_equalTo(CMScale(40));            
-        }];
-    }
-}
-
--(void)runtimeLeftAction:(UIButton *)btn{
-
-}
--(void)runtimeMiddleAction:(UIButton *)btn{
-    
-}
--(void)runtimeRightAction:(UIButton *)btn{
-    
 }
 
 
@@ -112,6 +94,29 @@
 
 
 
+
+- (void)addButtonsWithArray:(NSArray *)titleArr top:(CGFloat)top{
+    
+    NSInteger margin = CMScale(20.0);
+    NSInteger btnW = (kLWScreenW - (titleArr.count+1)*margin)/titleArr.count;
+    
+    for (int i = 0; i<titleArr.count; i++) {
+        
+        NSDictionary *btnInfo = titleArr[i];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setTitle:btnInfo[@"title"] forState:UIControlStateNormal];
+        SEL selector = NSSelectorFromString(btnInfo[@"selector"]);
+        [btn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+        btn.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+        [self.view addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(top + margin);
+            make.left.mas_equalTo(margin*(i+1)+btnW*i);
+            make.width.mas_equalTo(btnW);
+            make.height.mas_equalTo(CMScale(40));
+        }];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {

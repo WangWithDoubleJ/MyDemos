@@ -41,8 +41,6 @@
     NSMutableString *strRetain = [NSMutableString stringWithFormat:@"123"];
     self.strRetain = strRetain;
     self.strCopy = strRetain;
-    
-    
     NSLog(@"\nstrRetain=%p;\nself.strRetain=%p;\nself.strCopy=%p",strRetain,self.strRetain,self.strCopy);
     
     

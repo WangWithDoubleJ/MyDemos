@@ -2,24 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MaiDianTest1VC</key>
+	<dict>
+		<key>viewDidAppear:</key>
+		<array>
+			<string>co</string>
+		</array>
+	</dict>
 	<key>MaiDianViewController</key>
 	<dict>
-		<key>runtimeLeftAction:</key>
+		<key>tapActionWithCondition:</key>
+		<array>
+			<string>co</string>
+			<string>userName</string>
+		</array>
+		<key>tapActionWithOutCondition:</key>
+		<array>
+			<string>co</string>
+			<string>userName</string>
+		</array>
+		<key>runtimeLeftControlAction:</key>
 		<array>
 			<string>co</string>
 			<string>userName</string>
 			<string>grabOrderState</string>
 		</array>
-		<key>runtimeMiddleAction:</key>
+		<key>runtimeMiddleControlAction:</key>
 		<array>
 			<string>co</string>
 			<string>userName</string>
-			<string>grabOrderState</string>
 		</array>
-		<key>runtimeRightAction:</key>
+		<key>runtimeRightControlAction:</key>
 		<array>
 			<string>co</string>
-			<string>userName</string>
 			<string>grabOrderState</string>
 		</array>
 	</dict>
