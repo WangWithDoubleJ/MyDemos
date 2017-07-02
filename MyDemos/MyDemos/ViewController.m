@@ -17,6 +17,7 @@
 #import "MaiDianViewController.h"
 #import "CSViewController.h"
 #import "LWTableBarVC.h"
+#import "NSPredicateTestVC.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -49,7 +50,8 @@
                    @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"},
                    @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"},
                    @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"},
-                   @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"}];
+                   @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"},
+                   @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -188,9 +190,23 @@
     [self.navigationController pushViewController:csvc animated:YES];
 }
 
+
+/**
+ tabbarController
+ */
 -(void)tabBarVC_viewControllerJump{
     LWTableBarVC *vc = [[LWTableBarVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+/**
+ 谓词
+ */
+- (void)predicateTestVC_viewControllerJump{
+    NSPredicateTestVC *vc = [[NSPredicateTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 

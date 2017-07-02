@@ -36,6 +36,8 @@
 		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
 		892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */; };
 		892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */; };
+		8934422B1F0891D0000E1F55 /* NSPredicateTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8934422A1F0891D0000E1F55 /* NSPredicateTestVC.m */; };
+		893442321F08933C000E1F55 /* LWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893442311F08933C000E1F55 /* LWBaseViewController.m */; };
 		893A81ED1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */; };
 		893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */; };
 		89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471F7A1F03B08C000F04DA /* CSViewController.m */; };
@@ -204,6 +206,10 @@
 		892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiDianDataModel.m; sourceTree = "<group>"; };
 		892E7CC01F026E82006C7106 /* UIViewController+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LWSwizzle.h"; sourceTree = "<group>"; };
 		892E7CC11F026E82006C7106 /* UIViewController+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LWSwizzle.m"; sourceTree = "<group>"; };
+		893442291F0891D0000E1F55 /* NSPredicateTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPredicateTestVC.h; sourceTree = "<group>"; };
+		8934422A1F0891D0000E1F55 /* NSPredicateTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPredicateTestVC.m; sourceTree = "<group>"; };
+		893442301F08933C000E1F55 /* LWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseViewController.h; sourceTree = "<group>"; };
+		893442311F08933C000E1F55 /* LWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseViewController.m; sourceTree = "<group>"; };
 		893A81EB1EFCC4BE003A2D14 /* UIControl+LWSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+LWSwizzle.h"; sourceTree = "<group>"; };
 		893A81EC1EFCC4BE003A2D14 /* UIControl+LWSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+LWSwizzle.m"; sourceTree = "<group>"; };
 		893A81EF1EFCC8CA003A2D14 /* LWLogInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LWLogInfo.plist; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				893442281F0891A4000E1F55 /* 谓词(NSPredicate) */,
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
 				89471F781F03B056000F04DA /* copy和strong的区别 */,
 				897895891EFA42F200623896 /* 埋点实现 */,
@@ -329,6 +336,8 @@
 				890E44511EA89B5B00EB2BC2 /* AppDelegate.m */,
 				890E44531EA89B5B00EB2BC2 /* ViewController.h */,
 				890E44541EA89B5B00EB2BC2 /* ViewController.m */,
+				893442301F08933C000E1F55 /* LWBaseViewController.h */,
+				893442311F08933C000E1F55 /* LWBaseViewController.m */,
 				890E44561EA89B5B00EB2BC2 /* Main.storyboard */,
 				890E44591EA89B5B00EB2BC2 /* Assets.xcassets */,
 				890E445B1EA89B5B00EB2BC2 /* LaunchScreen.storyboard */,
@@ -555,6 +564,15 @@
 				892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		893442281F0891A4000E1F55 /* 谓词(NSPredicate) */ = {
+			isa = PBXGroup;
+			children = (
+				893442291F0891D0000E1F55 /* NSPredicateTestVC.h */,
+				8934422A1F0891D0000E1F55 /* NSPredicateTestVC.m */,
+			);
+			path = "谓词(NSPredicate)";
 			sourceTree = "<group>";
 		};
 		893A81EE1EFCC897003A2D14 /* resources */ = {
@@ -872,7 +890,9 @@
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
+				8934422B1F0891D0000E1F55 /* NSPredicateTestVC.m in Sources */,
 				890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */,
+				893442321F08933C000E1F55 /* LWBaseViewController.m in Sources */,
 				89B585811EADA1F100C1F73D /* RSAEncryptorVC.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,
 				89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */,

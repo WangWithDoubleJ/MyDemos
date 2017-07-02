@@ -48,6 +48,13 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     NSLog(@"%@",item.title);
+    NSInteger index = [tabBar.items indexOfObject:item];
+    if (index==3||index==5) {
+        tabBar.hidden = YES;
+    }else{
+        tabBar.hidden = NO;
+    }
+    
 }
 
 
