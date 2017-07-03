@@ -43,6 +43,7 @@
 		89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471F7A1F03B08C000F04DA /* CSViewController.m */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
+		8977BB9D1F09CA8D00AE7B63 /* NSString+implement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8977BB9C1F09CA8D00AE7B63 /* NSString+implement.m */; };
 		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
 		897895941EFA4DD300623896 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895931EFA4DD300623896 /* LogManager.m */; };
 		897895981EFBB51500623896 /* LWSwizzleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895971EFBB51500623896 /* LWSwizzleTool.m */; };
@@ -219,6 +220,8 @@
 		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
 		895C94C51ECE870D005B299C /* SwizzMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzMethodVC.m; sourceTree = "<group>"; };
+		8977BB9B1F09CA8D00AE7B63 /* NSString+implement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+implement.h"; sourceTree = "<group>"; };
+		8977BB9C1F09CA8D00AE7B63 /* NSString+implement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+implement.m"; sourceTree = "<group>"; };
 		8978958A1EFA439500623896 /* MaiDianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianViewController.h; sourceTree = "<group>"; };
 		8978958B1EFA439500623896 /* MaiDianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiDianViewController.m; sourceTree = "<group>"; };
 		897895921EFA4DD300623896 /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 				89B585771EADA1F100C1F73D /* RSA加密 */,
 				893C93171F02A34000303C01 /* 国际化 */,
 				892C46401F0545D8003B6E4B /* UITabBarController */,
+				8977BB9A1F09CA5900AE7B63 /* 其他 */,
 				890E44501EA89B5B00EB2BC2 /* AppDelegate.h */,
 				890E44511EA89B5B00EB2BC2 /* AppDelegate.m */,
 				890E44531EA89B5B00EB2BC2 /* ViewController.h */,
@@ -617,6 +621,15 @@
 			path = "runtime交换方法实现";
 			sourceTree = "<group>";
 		};
+		8977BB9A1F09CA5900AE7B63 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				8977BB9B1F09CA8D00AE7B63 /* NSString+implement.h */,
+				8977BB9C1F09CA8D00AE7B63 /* NSString+implement.m */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
 		897895891EFA42F200623896 /* 埋点实现 */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +900,7 @@
 				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
 				892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */,
+				8977BB9D1F09CA8D00AE7B63 /* NSString+implement.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
