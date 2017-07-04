@@ -17,4 +17,13 @@
     return AUTORELEASE(obj);
     
 }
+
+NSString *AUTORELEASE(id obj){
+    NSString *str=nil;
+    @autoreleasepool {
+          str = obj;
+    }
+    return str;
+}
+
 @end
