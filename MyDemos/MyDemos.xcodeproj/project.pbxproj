@@ -322,6 +322,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				895B8F1D1F0F12AF00E7F658 /* temp */,
 				893442281F0891A4000E1F55 /* 谓词(NSPredicate) */,
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
 				89471F781F03B056000F04DA /* copy和strong的区别 */,
@@ -610,6 +611,13 @@
 				8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */,
 			);
 			path = "动画";
+			sourceTree = "<group>";
+		};
+		895B8F1D1F0F12AF00E7F658 /* temp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = temp;
 			sourceTree = "<group>";
 		};
 		895C94C31ECE86EE005B299C /* runtime交换方法实现 */ = {
