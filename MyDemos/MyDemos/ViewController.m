@@ -51,7 +51,8 @@
                    @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"},
                    @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"},
                    @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"},
-                   @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"}];
+                   @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"},
+                   @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -97,7 +98,7 @@
     [invocation setTarget:self];
     [invocation setSelector:selector];
     
-    //这里不用设置参数
+    //这里不用设置`参数
     //int a = 1;
     //int b = 2;
     //int c = 3;
@@ -209,6 +210,17 @@
 
 }
 
+
+/**
+ easywebviewdemo
+ */
+- (void)EasyWebviewTestVC_viewControllerJump{
+    
+    
+    
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
