@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebviewTestPage</title>
+</head>
+<body>
+ <input type="button" value="传个字典2" onclick="callOC2('testFunc',{'param1':76,'param2':155,'param3':76})"/>
+</body>
+
+<script>
+    function callOC2(func,param){
+        var iframe = document.createElement("iframe");
+        var url= "myapp:" + "&func=" + func;
+        for(var i in param){
+            url = url + "&" + i + "=" + param[i];
+        }
+        iframe.src = url;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        iframe.parentNode.removeChild(iframe);
+        iframe = null;
+    }
+</script>
+
+</html>

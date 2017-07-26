@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
-#import "W_URLProtocol.h"
+//#import "W_URLProtocol.h"
 #import <UserNotifications/UserNotifications.h>
 
 
@@ -26,7 +26,7 @@
     self.window.rootViewController = vc;
     
     //1.NSURLProtocoldemo需要在APPdelegate中注册自定义protocol类
-    [NSURLProtocol registerClass:[W_URLProtocol class]];
+    //[NSURLProtocol registerClass:[W_URLProtocol class]];
 
     //远程推送功测试
     if ([[UIDevice currentDevice].systemVersion floatValue] >=10.0) {           //10.0以上系统推送实现

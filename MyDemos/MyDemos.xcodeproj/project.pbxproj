@@ -29,8 +29,6 @@
 		890FBA781EB040A800C10AE5 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA6D1EB040A800C10AE5 /* RSADataSigner.m */; };
 		890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */; };
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
-		891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */; };
-		891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 891D5DA51EBB2027007605DA /* W_URLProtocol.m */; };
 		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
 		892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C46421F054605003B6E4B /* LWTableBarVC.m */; };
 		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
@@ -43,6 +41,9 @@
 		89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471F7A1F03B08C000F04DA /* CSViewController.m */; };
 		8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */; };
 		895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 895C94C51ECE870D005B299C /* SwizzMethodVC.m */; };
+		89726D5F1F26CDEA00A39FA0 /* LWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89726D5D1F26CDEA00A39FA0 /* LWBaseWebViewController.m */; };
+		89726D601F26CDEA00A39FA0 /* webviewTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 89726D5E1F26CDEA00A39FA0 /* webviewTest.html */; };
+		89726D631F26CE5200A39FA0 /* MyTestEasyJSWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89726D621F26CE5200A39FA0 /* MyTestEasyJSWebVC.m */; };
 		8977BB9D1F09CA8D00AE7B63 /* NSString+implement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8977BB9C1F09CA8D00AE7B63 /* NSString+implement.m */; };
 		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
 		897895941EFA4DD300623896 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895931EFA4DD300623896 /* LogManager.m */; };
@@ -63,12 +64,6 @@
 		89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FD1EADD53200C1F73D /* libc++.tbd */; };
 		89B586021EADD69D00C1F73D /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B586011EADD69D00C1F73D /* ALViewController.m */; };
 		89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CC58E11EDE96670026365D /* UserNotifications.framework */; };
-		89E767EE1F162213007AD3E6 /* easyjs-inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 89E767E71F162213007AD3E6 /* easyjs-inject.js */; };
-		89E767EF1F162213007AD3E6 /* EasyJSDataFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E767E91F162213007AD3E6 /* EasyJSDataFunction.m */; };
-		89E767F01F162213007AD3E6 /* EasyJSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E767EB1F162213007AD3E6 /* EasyJSWebView.m */; };
-		89E767F11F162213007AD3E6 /* EasyJSWebViewProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E767ED1F162213007AD3E6 /* EasyJSWebViewProxyDelegate.m */; };
-		89E767F41F162250007AD3E6 /* MyJSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E767F31F162250007AD3E6 /* MyJSInterface.m */; };
-		89E767F71F162364007AD3E6 /* MyBaseWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E767F61F162364007AD3E6 /* MyBaseWebController.m */; };
 		89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FC4E451F04D56900D81B65 /* UIButton+Addition.m */; };
 		89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */; };
 /* End PBXBuildFile section */
@@ -197,10 +192,6 @@
 		890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
 		890FBA7B1EB08BFE00C10AE5 /* APAuthV2Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthV2Info.h; sourceTree = "<group>"; };
 		890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAuthV2Info.m; sourceTree = "<group>"; };
-		891D5D991EBADBFE007605DA /* NSURLProtocolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLProtocolVC.h; sourceTree = "<group>"; };
-		891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLProtocolVC.m; sourceTree = "<group>"; };
-		891D5DA41EBB2027007605DA /* W_URLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_URLProtocol.h; sourceTree = "<group>"; };
-		891D5DA51EBB2027007605DA /* W_URLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W_URLProtocol.m; sourceTree = "<group>"; };
 		8928D4851F00EE6D0006DFC9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8928D4871F00F2220006DFC9 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8928D4891F0108990006DFC9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
@@ -226,6 +217,11 @@
 		8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
 		895C94C41ECE870D005B299C /* SwizzMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzMethodVC.h; sourceTree = "<group>"; };
 		895C94C51ECE870D005B299C /* SwizzMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzMethodVC.m; sourceTree = "<group>"; };
+		89726D5C1F26CDEA00A39FA0 /* LWBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseWebViewController.h; sourceTree = "<group>"; };
+		89726D5D1F26CDEA00A39FA0 /* LWBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseWebViewController.m; sourceTree = "<group>"; };
+		89726D5E1F26CDEA00A39FA0 /* webviewTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webviewTest.html; sourceTree = "<group>"; };
+		89726D611F26CE5200A39FA0 /* MyTestEasyJSWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTestEasyJSWebVC.h; sourceTree = "<group>"; };
+		89726D621F26CE5200A39FA0 /* MyTestEasyJSWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTestEasyJSWebVC.m; sourceTree = "<group>"; };
 		8977BB9B1F09CA8D00AE7B63 /* NSString+implement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+implement.h"; sourceTree = "<group>"; };
 		8977BB9C1F09CA8D00AE7B63 /* NSString+implement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+implement.m"; sourceTree = "<group>"; };
 		8978958A1EFA439500623896 /* MaiDianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiDianViewController.h; sourceTree = "<group>"; };
@@ -254,17 +250,6 @@
 		89B586011EADD69D00C1F73D /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
 		89CC58E01EDE711F0026365D /* MyDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDemos.entitlements; sourceTree = "<group>"; };
 		89CC58E11EDE96670026365D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
-		89E767E71F162213007AD3E6 /* easyjs-inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "easyjs-inject.js"; sourceTree = "<group>"; };
-		89E767E81F162213007AD3E6 /* EasyJSDataFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSDataFunction.h; sourceTree = "<group>"; };
-		89E767E91F162213007AD3E6 /* EasyJSDataFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSDataFunction.m; sourceTree = "<group>"; };
-		89E767EA1F162213007AD3E6 /* EasyJSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSWebView.h; sourceTree = "<group>"; };
-		89E767EB1F162213007AD3E6 /* EasyJSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSWebView.m; sourceTree = "<group>"; };
-		89E767EC1F162213007AD3E6 /* EasyJSWebViewProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSWebViewProxyDelegate.h; sourceTree = "<group>"; };
-		89E767ED1F162213007AD3E6 /* EasyJSWebViewProxyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSWebViewProxyDelegate.m; sourceTree = "<group>"; };
-		89E767F21F162250007AD3E6 /* MyJSInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyJSInterface.h; sourceTree = "<group>"; };
-		89E767F31F162250007AD3E6 /* MyJSInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyJSInterface.m; sourceTree = "<group>"; };
-		89E767F51F162364007AD3E6 /* MyBaseWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseWebController.h; sourceTree = "<group>"; };
-		89E767F61F162364007AD3E6 /* MyBaseWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseWebController.m; sourceTree = "<group>"; };
 		89FC4E441F04D56900D81B65 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		89FC4E451F04D56900D81B65 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
 		89FE23841EC9A09A00AB6AE1 /* CCodeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCodeTestVC.h; sourceTree = "<group>"; };
@@ -307,19 +292,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8906A7891F160ABF00FB77FE /* EasyWebviewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				89E767F81F1623A1007AD3E6 /* html5sources */,
-				89E767E61F1621F2007AD3E6 /* EasyJSWebview */,
-				89E767F21F162250007AD3E6 /* MyJSInterface.h */,
-				89E767F31F162250007AD3E6 /* MyJSInterface.m */,
-				89E767F51F162364007AD3E6 /* MyBaseWebController.h */,
-				89E767F61F162364007AD3E6 /* MyBaseWebController.m */,
-			);
-			path = EasyWebviewDemo;
-			sourceTree = "<group>";
-		};
 		890CD8C71EB81CDD007B1169 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +324,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
-				8906A7891F160ABF00FB77FE /* EasyWebviewDemo */,
+				896645E41F21E16A00DCCF8B /* WebAndOC */,
 				895B8F1D1F0F12AF00E7F658 /* temp */,
 				893442281F0891A4000E1F55 /* 谓词(NSPredicate) */,
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
@@ -544,20 +516,8 @@
 		891D5D981EBADB81007605DA /* NSURLProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				891D5DA31EBB1FEB007605DA /* CustomURLProtocol */,
-				891D5D991EBADBFE007605DA /* NSURLProtocolVC.h */,
-				891D5D9A1EBADBFE007605DA /* NSURLProtocolVC.m */,
 			);
 			path = NSURLProtocol;
-			sourceTree = "<group>";
-		};
-		891D5DA31EBB1FEB007605DA /* CustomURLProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				891D5DA41EBB2027007605DA /* W_URLProtocol.h */,
-				891D5DA51EBB2027007605DA /* W_URLProtocol.m */,
-			);
-			path = CustomURLProtocol;
 			sourceTree = "<group>";
 		};
 		8928D4861F00F1C60006DFC9 /* Define */ = {
@@ -660,6 +620,34 @@
 			path = "runtime交换方法实现";
 			sourceTree = "<group>";
 		};
+		896645E41F21E16A00DCCF8B /* WebAndOC */ = {
+			isa = PBXGroup;
+			children = (
+				89726D5B1F26CDEA00A39FA0 /* simpleDemo */,
+				89726D5A1F26CDAC00A39FA0 /* EasyJSwebview */,
+			);
+			path = WebAndOC;
+			sourceTree = "<group>";
+		};
+		89726D5A1F26CDAC00A39FA0 /* EasyJSwebview */ = {
+			isa = PBXGroup;
+			children = (
+				89726D611F26CE5200A39FA0 /* MyTestEasyJSWebVC.h */,
+				89726D621F26CE5200A39FA0 /* MyTestEasyJSWebVC.m */,
+			);
+			path = EasyJSwebview;
+			sourceTree = "<group>";
+		};
+		89726D5B1F26CDEA00A39FA0 /* simpleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89726D5C1F26CDEA00A39FA0 /* LWBaseWebViewController.h */,
+				89726D5D1F26CDEA00A39FA0 /* LWBaseWebViewController.m */,
+				89726D5E1F26CDEA00A39FA0 /* webviewTest.html */,
+			);
+			path = simpleDemo;
+			sourceTree = "<group>";
+		};
 		8977BB9A1F09CA5900AE7B63 /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,27 +734,6 @@
 				89B586011EADD69D00C1F73D /* ALViewController.m */,
 			);
 			path = WJ_ALCustomFlies;
-			sourceTree = "<group>";
-		};
-		89E767E61F1621F2007AD3E6 /* EasyJSWebview */ = {
-			isa = PBXGroup;
-			children = (
-				89E767E71F162213007AD3E6 /* easyjs-inject.js */,
-				89E767E81F162213007AD3E6 /* EasyJSDataFunction.h */,
-				89E767E91F162213007AD3E6 /* EasyJSDataFunction.m */,
-				89E767EA1F162213007AD3E6 /* EasyJSWebView.h */,
-				89E767EB1F162213007AD3E6 /* EasyJSWebView.m */,
-				89E767EC1F162213007AD3E6 /* EasyJSWebViewProxyDelegate.h */,
-				89E767ED1F162213007AD3E6 /* EasyJSWebViewProxyDelegate.m */,
-			);
-			path = EasyJSWebview;
-			sourceTree = "<group>";
-		};
-		89E767F81F1623A1007AD3E6 /* html5sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = html5sources;
 			sourceTree = "<group>";
 		};
 		89FE237D1EC99FFB00AB6AE1 /* C代码复习 */ = {
@@ -883,7 +850,7 @@
 				890FBA701EB040A800C10AE5 /* AlipaySDK.bundle in Resources */,
 				890E445D1EA89B5B00EB2BC2 /* LaunchScreen.storyboard in Resources */,
 				890E445A1EA89B5B00EB2BC2 /* Assets.xcassets in Resources */,
-				89E767EE1F162213007AD3E6 /* easyjs-inject.js in Resources */,
+				89726D601F26CDEA00A39FA0 /* webviewTest.html in Resources */,
 				890E44581EA89B5B00EB2BC2 /* Main.storyboard in Resources */,
 				89B5857E1EADA1F100C1F73D /* private_key.p12 in Resources */,
 				89B5857F1EADA1F100C1F73D /* public_key.der in Resources */,
@@ -952,37 +919,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E767F01F162213007AD3E6 /* EasyJSWebView.m in Sources */,
 				897895941EFA4DD300623896 /* LogManager.m in Sources */,
 				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
 				892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */,
-				89E767F41F162250007AD3E6 /* MyJSInterface.m in Sources */,
 				892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */,
 				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
-				891D5DA61EBB2027007605DA /* W_URLProtocol.m in Sources */,
 				89B586021EADD69D00C1F73D /* ALViewController.m in Sources */,
 				892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */,
 				8977BB9D1F09CA8D00AE7B63 /* NSString+implement.m in Sources */,
-				89E767EF1F162213007AD3E6 /* EasyJSDataFunction.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
 				8934422B1F0891D0000E1F55 /* NSPredicateTestVC.m in Sources */,
 				890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */,
 				893442321F08933C000E1F55 /* LWBaseViewController.m in Sources */,
-				89E767F71F162364007AD3E6 /* MyBaseWebController.m in Sources */,
+				89726D5F1F26CDEA00A39FA0 /* LWBaseWebViewController.m in Sources */,
 				89B585811EADA1F100C1F73D /* RSAEncryptorVC.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,
 				89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */,
+				89726D631F26CE5200A39FA0 /* MyTestEasyJSWebVC.m in Sources */,
 				890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */,
 				890FBA781EB040A800C10AE5 /* RSADataSigner.m in Sources */,
 				890FBA771EB040A800C10AE5 /* openssl_wrapper.m in Sources */,
 				8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */,
-				891D5D9B1EBADBFE007605DA /* NSURLProtocolVC.m in Sources */,
 				890FBA741EB040A800C10AE5 /* Order.m in Sources */,
 				892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */,
-				89E767F11F162213007AD3E6 /* EasyJSWebViewProxyDelegate.m in Sources */,
 				890CD8CA1EB81D03007B1169 /* FMDBTestVC.m in Sources */,
 				890E44521EA89B5B00EB2BC2 /* AppDelegate.m in Sources */,
 				890E444F1EA89B5B00EB2BC2 /* main.m in Sources */,

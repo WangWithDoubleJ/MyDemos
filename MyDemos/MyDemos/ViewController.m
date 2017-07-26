@@ -10,7 +10,6 @@
 #import "RSAEncryptorVC.h"
 #import "ALViewController.h"
 #import "FMDBTestVC.h"
-#import "NSURLProtocolVC.h"
 #import "CCodeTestVC.h"
 #import "SwizzMethodVC.h"
 #import "UIViewAnimationVC.h"
@@ -18,6 +17,7 @@
 #import "CSViewController.h"
 #import "LWTableBarVC.h"
 #import "NSPredicateTestVC.h"
+#import "LWBaseWebViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -145,8 +145,8 @@
  NSURLProtocol
  */
 - (void)NSURLProtocol_viewControllerJump{
-    NSURLProtocolVC *protocol = [[NSURLProtocolVC alloc] init];
-    [self.navigationController pushViewController:protocol animated:YES];
+    //NSURLProtocolVC *protocol = [[NSURLProtocolVC alloc] init];
+    //[self.navigationController pushViewController:protocol animated:YES];
 }
 
 
@@ -216,9 +216,8 @@
  */
 - (void)EasyWebviewTestVC_viewControllerJump{
     
-    
-    
-    
+    LWBaseWebViewController *vc = [[LWBaseWebViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
