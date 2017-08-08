@@ -64,6 +64,11 @@
 		89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FD1EADD53200C1F73D /* libc++.tbd */; };
 		89B586021EADD69D00C1F73D /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B586011EADD69D00C1F73D /* ALViewController.m */; };
 		89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CC58E11EDE96670026365D /* UserNotifications.framework */; };
+		89DC9B391F38741600CC6571 /* easyjs-inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DC9B311F38741600CC6571 /* easyjs-inject.js */; };
+		89DC9B3A1F38741600CC6571 /* EasyJSDataFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B331F38741600CC6571 /* EasyJSDataFunction.m */; };
+		89DC9B3B1F38741600CC6571 /* EasyJSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B351F38741600CC6571 /* EasyJSWebView.m */; };
+		89DC9B3C1F38741600CC6571 /* EasyJSWebViewProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B371F38741600CC6571 /* EasyJSWebViewProxyDelegate.m */; };
+		89DC9B3D1F38741600CC6571 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B381F38741600CC6571 /* README.md */; };
 		89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FC4E451F04D56900D81B65 /* UIButton+Addition.m */; };
 		89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */; };
 /* End PBXBuildFile section */
@@ -250,6 +255,14 @@
 		89B586011EADD69D00C1F73D /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
 		89CC58E01EDE711F0026365D /* MyDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDemos.entitlements; sourceTree = "<group>"; };
 		89CC58E11EDE96670026365D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		89DC9B311F38741600CC6571 /* easyjs-inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "easyjs-inject.js"; sourceTree = "<group>"; };
+		89DC9B321F38741600CC6571 /* EasyJSDataFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSDataFunction.h; sourceTree = "<group>"; };
+		89DC9B331F38741600CC6571 /* EasyJSDataFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSDataFunction.m; sourceTree = "<group>"; };
+		89DC9B341F38741600CC6571 /* EasyJSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSWebView.h; sourceTree = "<group>"; };
+		89DC9B351F38741600CC6571 /* EasyJSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSWebView.m; sourceTree = "<group>"; };
+		89DC9B361F38741600CC6571 /* EasyJSWebViewProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSWebViewProxyDelegate.h; sourceTree = "<group>"; };
+		89DC9B371F38741600CC6571 /* EasyJSWebViewProxyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSWebViewProxyDelegate.m; sourceTree = "<group>"; };
+		89DC9B381F38741600CC6571 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		89FC4E441F04D56900D81B65 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		89FC4E451F04D56900D81B65 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
 		89FE23841EC9A09A00AB6AE1 /* CCodeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCodeTestVC.h; sourceTree = "<group>"; };
@@ -634,6 +647,7 @@
 			children = (
 				89726D611F26CE5200A39FA0 /* MyTestEasyJSWebVC.h */,
 				89726D621F26CE5200A39FA0 /* MyTestEasyJSWebVC.m */,
+				89DC9B301F38741600CC6571 /* EasyJSEWebview */,
 			);
 			path = EasyJSwebview;
 			sourceTree = "<group>";
@@ -734,6 +748,21 @@
 				89B586011EADD69D00C1F73D /* ALViewController.m */,
 			);
 			path = WJ_ALCustomFlies;
+			sourceTree = "<group>";
+		};
+		89DC9B301F38741600CC6571 /* EasyJSEWebview */ = {
+			isa = PBXGroup;
+			children = (
+				89DC9B311F38741600CC6571 /* easyjs-inject.js */,
+				89DC9B321F38741600CC6571 /* EasyJSDataFunction.h */,
+				89DC9B331F38741600CC6571 /* EasyJSDataFunction.m */,
+				89DC9B341F38741600CC6571 /* EasyJSWebView.h */,
+				89DC9B351F38741600CC6571 /* EasyJSWebView.m */,
+				89DC9B361F38741600CC6571 /* EasyJSWebViewProxyDelegate.h */,
+				89DC9B371F38741600CC6571 /* EasyJSWebViewProxyDelegate.m */,
+				89DC9B381F38741600CC6571 /* README.md */,
+			);
+			path = EasyJSEWebview;
 			sourceTree = "<group>";
 		};
 		89FE237D1EC99FFB00AB6AE1 /* C代码复习 */ = {
@@ -849,6 +878,7 @@
 				893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */,
 				890FBA701EB040A800C10AE5 /* AlipaySDK.bundle in Resources */,
 				890E445D1EA89B5B00EB2BC2 /* LaunchScreen.storyboard in Resources */,
+				89DC9B391F38741600CC6571 /* easyjs-inject.js in Resources */,
 				890E445A1EA89B5B00EB2BC2 /* Assets.xcassets in Resources */,
 				89726D601F26CDEA00A39FA0 /* webviewTest.html in Resources */,
 				890E44581EA89B5B00EB2BC2 /* Main.storyboard in Resources */,
@@ -919,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DC9B3B1F38741600CC6571 /* EasyJSWebView.m in Sources */,
 				897895941EFA4DD300623896 /* LogManager.m in Sources */,
 				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
@@ -929,6 +960,7 @@
 				892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */,
 				8977BB9D1F09CA8D00AE7B63 /* NSString+implement.m in Sources */,
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
+				89DC9B3A1F38741600CC6571 /* EasyJSDataFunction.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
 				8934422B1F0891D0000E1F55 /* NSPredicateTestVC.m in Sources */,
@@ -945,6 +977,8 @@
 				8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */,
 				890FBA741EB040A800C10AE5 /* Order.m in Sources */,
 				892E7CC21F026E82006C7106 /* UIViewController+LWSwizzle.m in Sources */,
+				89DC9B3C1F38741600CC6571 /* EasyJSWebViewProxyDelegate.m in Sources */,
+				89DC9B3D1F38741600CC6571 /* README.md in Sources */,
 				890CD8CA1EB81D03007B1169 /* FMDBTestVC.m in Sources */,
 				890E44521EA89B5B00EB2BC2 /* AppDelegate.m in Sources */,
 				890E444F1EA89B5B00EB2BC2 /* main.m in Sources */,

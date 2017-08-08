@@ -52,7 +52,8 @@
                    @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"},
                    @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"},
                    @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"},
-                   @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"}];
+                   @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"},
+                   @{@"title":@"跳转到其他APP",@"methodName":@"jumpToAnOtherApp"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -219,6 +220,10 @@
     LWBaseWebViewController *vc = [[LWBaseWebViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+- (void)jumpToAnOtherApp{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"demo1://com.wangjianjune.demo1"] options:@{@"yyep":@"1"} completionHandler:nil];
 }
 
 - (void)didReceiveMemoryWarning {

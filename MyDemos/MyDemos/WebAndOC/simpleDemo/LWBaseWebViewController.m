@@ -107,9 +107,6 @@
     
 }
 
-
-
-
 #pragma mark - OC调用JS
 - (void)submitFromWithParams1:(NSString *)str1 params2:(NSString *)str2 params3:(NSString *)str3 {
     
