@@ -39,11 +39,11 @@
 	
 	if (params){
 		for (int i = 0; i < params.count; i++){
-			NSString* arg = [params objectAtIndex:i];
+//			NSString* arg = [params objectAtIndex:i];
+//            
+//			NSString* encodedArg = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)arg, NULL, (CFStringRef) @"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
             
-			NSString* encodedArg = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)arg, NULL, (CFStringRef) @"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
-                        
-			[injection appendFormat:@", \"%@\"", encodedArg];
+//			[injection appendFormat:@", \"%@\"", encodedArg];
 		}
 	}
 	[injection appendString:@");"];

@@ -337,6 +337,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				89894DB61F3AB2C300912D22 /* THRIFT_DEMO */,
 				896645E41F21E16A00DCCF8B /* WebAndOC */,
 				895B8F1D1F0F12AF00E7F658 /* temp */,
 				893442281F0891A4000E1F55 /* 谓词(NSPredicate) */,
@@ -717,6 +718,13 @@
 				89FC4E451F04D56900D81B65 /* UIButton+Addition.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		89894DB61F3AB2C300912D22 /* THRIFT_DEMO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = THRIFT_DEMO;
 			sourceTree = "<group>";
 		};
 		89B585771EADA1F100C1F73D /* RSA加密 */ = {
