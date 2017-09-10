@@ -30,6 +30,9 @@
 		890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */; };
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
 		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
+		892AF7021F63FF7000E9CFE2 /* PAAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 892AF7011F63FF7000E9CFE2 /* PAAddressPicker.m */; };
+		892AF7051F63FFC600E9CFE2 /* CitySelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892AF7041F63FFC600E9CFE2 /* CitySelectorController.m */; };
+		892AF7081F642CF300E9CFE2 /* UIPickerView+malPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 892AF7071F642CF300E9CFE2 /* UIPickerView+malPicker.m */; };
 		892C46431F054605003B6E4B /* LWTableBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C46421F054605003B6E4B /* LWTableBarVC.m */; };
 		892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBA1F01F104006C7106 /* UIConfigManager.m */; };
 		892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E7CBE1F0245B2006C7106 /* MaiDianDataModel.m */; };
@@ -201,6 +204,12 @@
 		8928D4871F00F2220006DFC9 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8928D4891F0108990006DFC9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		8928D48A1F0108990006DFC9 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		892AF7001F63FF7000E9CFE2 /* PAAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddressPicker.h; sourceTree = "<group>"; };
+		892AF7011F63FF7000E9CFE2 /* PAAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddressPicker.m; sourceTree = "<group>"; };
+		892AF7031F63FFC600E9CFE2 /* CitySelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySelectorController.h; sourceTree = "<group>"; };
+		892AF7041F63FFC600E9CFE2 /* CitySelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySelectorController.m; sourceTree = "<group>"; };
+		892AF7061F642CF300E9CFE2 /* UIPickerView+malPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+malPicker.h"; sourceTree = "<group>"; };
+		892AF7071F642CF300E9CFE2 /* UIPickerView+malPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+malPicker.m"; sourceTree = "<group>"; };
 		892C46411F054605003B6E4B /* LWTableBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWTableBarVC.h; sourceTree = "<group>"; };
 		892C46421F054605003B6E4B /* LWTableBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWTableBarVC.m; sourceTree = "<group>"; };
 		892E7CB91F01F104006C7106 /* UIConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfigManager.h; sourceTree = "<group>"; };
@@ -337,6 +346,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */,
 				89894DB61F3AB2C300912D22 /* THRIFT_DEMO */,
 				896645E41F21E16A00DCCF8B /* WebAndOC */,
 				895B8F1D1F0F12AF00E7F658 /* temp */,
@@ -547,6 +557,19 @@
 			children = (
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				892AF7001F63FF7000E9CFE2 /* PAAddressPicker.h */,
+				892AF7011F63FF7000E9CFE2 /* PAAddressPicker.m */,
+				892AF7031F63FFC600E9CFE2 /* CitySelectorController.h */,
+				892AF7041F63FFC600E9CFE2 /* CitySelectorController.m */,
+				892AF7061F642CF300E9CFE2 /* UIPickerView+malPicker.h */,
+				892AF7071F642CF300E9CFE2 /* UIPickerView+malPicker.m */,
+			);
+			path = "城市选择器";
 			sourceTree = "<group>";
 		};
 		892C46401F0545D8003B6E4B /* UITabBarController */ = {
@@ -957,7 +980,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892AF7051F63FFC600E9CFE2 /* CitySelectorController.m in Sources */,
 				89DC9B3B1F38741600CC6571 /* EasyJSWebView.m in Sources */,
+				892AF7021F63FF7000E9CFE2 /* PAAddressPicker.m in Sources */,
 				897895941EFA4DD300623896 /* LogManager.m in Sources */,
 				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
@@ -976,6 +1001,7 @@
 				893442321F08933C000E1F55 /* LWBaseViewController.m in Sources */,
 				89726D5F1F26CDEA00A39FA0 /* LWBaseWebViewController.m in Sources */,
 				89B585811EADA1F100C1F73D /* RSAEncryptorVC.m in Sources */,
+				892AF7081F642CF300E9CFE2 /* UIPickerView+malPicker.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,
 				89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */,
 				89726D631F26CE5200A39FA0 /* MyTestEasyJSWebVC.m in Sources */,
@@ -1149,10 +1175,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.demopush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.demopush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "384aeeff-237d-4a62-8f17-25f4e6382393";
-				PROVISIONING_PROFILE_SPECIFIER = Demospushprofile;
+				PROVISIONING_PROFILE = "cbdedf01-0f9e-4c01-b9f8-6da685c2444f";
+				PROVISIONING_PROFILE_SPECIFIER = SZYiZhangTongProfile;
 			};
 			name = Debug;
 		};
@@ -1180,10 +1206,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangjianjune.demopush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.demopush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "384aeeff-237d-4a62-8f17-25f4e6382393";
-				PROVISIONING_PROFILE_SPECIFIER = Demospushprofile;
+				PROVISIONING_PROFILE = "cbdedf01-0f9e-4c01-b9f8-6da685c2444f";
+				PROVISIONING_PROFILE_SPECIFIER = SZYiZhangTongProfile;
 			};
 			name = Release;
 		};

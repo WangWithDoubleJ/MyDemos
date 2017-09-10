@@ -18,6 +18,7 @@
 #import "LWTableBarVC.h"
 #import "NSPredicateTestVC.h"
 #import "LWBaseWebViewController.h"
+#import "CitySelectorController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -53,7 +54,8 @@
                    @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"},
                    @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"},
                    @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"},
-                   @{@"title":@"跳转到其他APP",@"methodName":@"jumpToAnOtherApp"}];
+                   @{@"title":@"跳转到其他APP",@"methodName":@"jumpToAnOtherApp"},
+                   @{@"title":@"城市选择器",@"methodName":@"jumpToCitySelector"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -224,6 +226,13 @@
 
 - (void)jumpToAnOtherApp{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"demo1://com.wangjianjune.demo1"] options:@{@"yyep":@"1"} completionHandler:nil];
+}
+
+
+- (void) jumpToCitySelector{
+    CitySelectorController *vc = [CitySelectorController new];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
