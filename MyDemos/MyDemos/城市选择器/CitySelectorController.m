@@ -18,10 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [PAAddressPicker showCityPickerView:self.view :@"A城市" :@[@"江岸区",@"圣彼得堡",@"尼古拉斯凯奇",@"阿尔及利亚",@"汉阳",@"江汉",@"东村",@"西村",@"南村"] :^(id content) {
-        NSLog(@"%@",content);
-    }];
     
+    
+    [PAAddressPicker showCityPickerView:self.view :@"叙利亚" :@[@"阿富汗",@"利比亚",@"伊拉克",@"伊朗",@"索马里",@"江汉",@"东村",@"西村",@"南村"] :^(id content, NSInteger index) {
+        
+        
+    }];
 
 }
 

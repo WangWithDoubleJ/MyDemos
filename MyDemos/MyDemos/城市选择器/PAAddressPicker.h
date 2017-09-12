@@ -12,7 +12,7 @@
 
 @interface PAAddressPicker : UIView
 
-@property (nonatomic, copy) void(^selectedBlock)(id content);       ///<点击确认执行的回调
+@property (nonatomic, copy) void(^selectedBlock)(id content,NSInteger index);       ///<点击确认执行的回调
 
-+ (id)showCityPickerView:(UIView *)view :(NSString *)title :(NSArray *)datas :(void(^)(id content))completeBlock;
++ (id)showCityPickerView:(UIView *)view :(NSString *)title :(NSArray *)datas :(void(^)(id content,NSInteger index))completeBlock;
 @end

@@ -9,9 +9,6 @@
 #import "PAAddressPicker.h"
 #import "UIPickerView+malPicker.h"
 
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
-
 @interface PAAddressPicker()<UIPickerViewDelegate,UIPickerViewDataSource>
 @property (nonatomic ,strong) UIPickerView *picker;                 ///<选择器
 @property (nonatomic, strong) UILabel *addressLab;///<显示当前选择城市名称
@@ -20,6 +17,7 @@
 @property (nonatomic, strong) NSArray <NSString *>*datas;///<数据
 @property (nonatomic, strong) NSString *titleString;///<标题
 @property (nonatomic, strong) id selectedContent;///<当前选择选中的内容
+@property (nonatomic, assign) NSInteger selectedIndex;///<选中的数据索引
 @property (nonatomic, strong) UIView *pickerBkV;///<picker背景view
 @end
 
@@ -36,10 +34,11 @@ static PAAddressPicker *pikerV = nil;
     return self;
 }
 
-+ (id)showCityPickerView:(UIView *)view :(NSString *)title :(NSArray *)datas :(void(^)(id content))completeBlock{
++ (id)showCityPickerView:(UIView *)view :(NSString *)title :(NSArray *)datas :(void(^)(id content ,NSInteger index))completeBlock{
     
     if ( pikerV == nil) {
         pikerV = [[PAAddressPicker alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        pikerV.backgroundColor = ColorWithRGBA(0, 0, 0,0.25);
         pikerV.datas = datas;
         pikerV.addressLab.text = title;
         pikerV.selectedBlock = completeBlock;
@@ -51,11 +50,22 @@ static PAAddressPicker *pikerV = nil;
 
 - (void)UIConfig{
     
-    _pickerBkV = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, CMScale(400))];
+    _pickerBkV = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, CMScale(400))];
     _pickerBkV.backgroundColor = [UIColor whiteColor];
     [self addSubview:_pickerBkV];
     
-    
+    _picker = [[UIPickerView alloc] init];
+    _picker.backgroundColor = [UIColor whiteColor];
+    _picker.delegate = self;
+    _picker.dataSource = self;
+    [_pickerBkV addSubview:_picker];
+    [_picker mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_pickerBkV.mas_top);
+        make.left.equalTo(_pickerBkV.mas_left);
+        make.right.equalTo(_pickerBkV.mas_right);
+        make.bottom.equalTo(_pickerBkV.mas_bottom).offset(CMScale(60));
+    }];
+
     //功能栏按钮
     _addressLab = [UILabel new];
     _addressLab.font = [UIFont systemFontOfSize:CMFontSize(16) weight:1];
@@ -69,7 +79,7 @@ static PAAddressPicker *pikerV = nil;
     //取消按钮
     _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [_cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_cancelBtn setTitleColor:Color90949e forState:UIControlStateNormal];
     _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:CMFontSize(14)];
     [_cancelBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [_pickerBkV addSubview:_cancelBtn];
@@ -79,12 +89,12 @@ static PAAddressPicker *pikerV = nil;
         make.width.mas_equalTo(CMScale(50));
         make.height.mas_equalTo(CMScale(25));
     }];
-
+    
     //确认按钮
     _confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
     _confirmBtn.titleLabel.font = [UIFont systemFontOfSize:CMFontSize(14)];
-    [_confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_confirmBtn setTitleColor:Color3c6bf0 forState:UIControlStateNormal];
     [_confirmBtn addTarget:self action:@selector(confirmBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [_pickerBkV addSubview:_confirmBtn];
     [_confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -93,18 +103,6 @@ static PAAddressPicker *pikerV = nil;
         make.width.mas_equalTo(CMScale(50));
         make.height.mas_equalTo(CMScale(25));
     }];
-    
-    _picker = [[UIPickerView alloc] init];
-    _picker.delegate = self;
-    _picker.dataSource = self;
-    [_pickerBkV addSubview:_picker];
-    [_picker mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_addressLab.mas_bottom).offset(CMScale(24));
-        make.left.equalTo(_pickerBkV.mas_left);
-        make.right.equalTo(_pickerBkV.mas_right);
-        make.bottom.equalTo(_pickerBkV.mas_bottom);
-    }];
-
     
     [UIView animateWithDuration:0.35 animations:^{
         CGRect frame =_pickerBkV.frame;
@@ -119,17 +117,20 @@ static PAAddressPicker *pikerV = nil;
 }
 
 - (void)confirmBtnClick:(UIButton *)btn{
-    self.selectedBlock(_selectedContent);
+    self.selectedBlock(_selectedContent,_selectedIndex);
+    [self hiddenView];
 }
 
 - (void)setDatas:(NSArray *)datas{
     _datas = datas;
     [self.picker reloadAllComponents];
+    [self pickerView:self.picker didSelectRow:0 inComponent:0];
 }
 
 #pragma mark - pickerView代理方法
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)   component{
     _selectedContent =  _datas[row];
+    _selectedIndex = row;
 }
 
 #pragma mark - pickerView数据源方法
@@ -159,7 +160,7 @@ static PAAddressPicker *pikerV = nil;
     CGSize titleSize = [textTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, CMScale(66)) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:CMScale(16)]} context:nil].size;
     
     UIView *line = [UIView new];
-    line.backgroundColor = [UIColor redColor];
+    line.backgroundColor = Color90949e;
     [componentV addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(componentV.mas_bottom);

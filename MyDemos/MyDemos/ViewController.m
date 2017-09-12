@@ -232,7 +232,7 @@
 - (void) jumpToCitySelector{
     CitySelectorController *vc = [CitySelectorController new];
     [self.navigationController pushViewController:vc animated:YES];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
