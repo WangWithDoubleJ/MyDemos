@@ -8,6 +8,7 @@
 
 #import "CitySelectorController.h"
 #import "PAAddressPicker.h"
+#import "DateLogic.h"
 
 @interface CitySelectorController ()
 
@@ -20,11 +21,14 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     
-    [PAAddressPicker showCityPickerView:self.view :@"叙利亚" :@[@"阿富汗",@"利比亚",@"伊拉克",@"伊朗",@"索马里",@"江汉",@"东村",@"西村",@"南村"] :^(id content, NSInteger index) {
-        
-        
-    }];
-
+//    [PAAddressPicker showCityPickerView:self.view :@"叙利亚" :@[@"阿富汗",@"利比亚",@"伊拉克",@"伊朗",@"索马里",@"江汉",@"东村",@"西村",@"南村"] :^(id content, NSInteger index) {
+//        
+//        
+//    }];
+    
+    NSLog(@"%@",[DateLogic getDateByYYYYMMddHHmmss:@"20170924240000"]);
+    
+    
 }
 
 - (void)dealloc{

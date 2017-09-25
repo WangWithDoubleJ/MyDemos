@@ -51,6 +51,7 @@
 		8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8978958B1EFA439500623896 /* MaiDianViewController.m */; };
 		897895941EFA4DD300623896 /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895931EFA4DD300623896 /* LogManager.m */; };
 		897895981EFBB51500623896 /* LWSwizzleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 897895971EFBB51500623896 /* LWSwizzleTool.m */; };
+		89B40B581F77DC3C00DA138D /* DateLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B40B571F77DC3C00DA138D /* DateLogic.m */; };
 		89B5857E1EADA1F100C1F73D /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 89B585781EADA1F100C1F73D /* private_key.p12 */; };
 		89B5857F1EADA1F100C1F73D /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 89B585791EADA1F100C1F73D /* public_key.der */; };
 		89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B5857B1EADA1F100C1F73D /* RSAEncryptor.m */; };
@@ -244,6 +245,8 @@
 		897895931EFA4DD300623896 /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
 		897895961EFBB51500623896 /* LWSwizzleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSwizzleTool.h; sourceTree = "<group>"; };
 		897895971EFBB51500623896 /* LWSwizzleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSwizzleTool.m; sourceTree = "<group>"; };
+		89B40B561F77DC3C00DA138D /* DateLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateLogic.h; sourceTree = "<group>"; };
+		89B40B571F77DC3C00DA138D /* DateLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateLogic.m; sourceTree = "<group>"; };
 		89B585781EADA1F100C1F73D /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
 		89B585791EADA1F100C1F73D /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 		89B5857A1EADA1F100C1F73D /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
@@ -346,6 +349,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				89B40B551F77DC2C00DA138D /* 时间处理 */,
 				892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */,
 				89894DB61F3AB2C300912D22 /* THRIFT_DEMO */,
 				896645E41F21E16A00DCCF8B /* WebAndOC */,
@@ -750,6 +754,15 @@
 			path = THRIFT_DEMO;
 			sourceTree = "<group>";
 		};
+		89B40B551F77DC2C00DA138D /* 时间处理 */ = {
+			isa = PBXGroup;
+			children = (
+				89B40B561F77DC3C00DA138D /* DateLogic.h */,
+				89B40B571F77DC3C00DA138D /* DateLogic.m */,
+			);
+			path = "时间处理";
+			sourceTree = "<group>";
+		};
 		89B585771EADA1F100C1F73D /* RSA加密 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,6 +1033,7 @@
 				895C94C61ECE870D005B299C /* SwizzMethodVC.m in Sources */,
 				897895981EFBB51500623896 /* LWSwizzleTool.m in Sources */,
 				89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */,
+				89B40B581F77DC3C00DA138D /* DateLogic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
