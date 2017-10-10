@@ -73,6 +73,9 @@
 		89DC9B3B1F38741600CC6571 /* EasyJSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B351F38741600CC6571 /* EasyJSWebView.m */; };
 		89DC9B3C1F38741600CC6571 /* EasyJSWebViewProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B371F38741600CC6571 /* EasyJSWebViewProxyDelegate.m */; };
 		89DC9B3D1F38741600CC6571 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B381F38741600CC6571 /* README.md */; };
+		89ED90951F8B4A2F00338974 /* WJBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED90941F8B4A2E00338974 /* WJBaseWebViewController.m */; };
+		89ED90971F8B4F3A00338974 /* WJWebTestFile.html in Resources */ = {isa = PBXBuildFile; fileRef = 89ED90961F8B4F3A00338974 /* WJWebTestFile.html */; };
+		89ED909A1F8B5A4D00338974 /* WJWebviewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED90991F8B5A4D00338974 /* WJWebviewDelegate.m */; };
 		89FC4E461F04D56900D81B65 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FC4E451F04D56900D81B65 /* UIButton+Addition.m */; };
 		89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FE23851EC9A09A00AB6AE1 /* CCodeTestVC.m */; };
 /* End PBXBuildFile section */
@@ -275,6 +278,11 @@
 		89DC9B361F38741600CC6571 /* EasyJSWebViewProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSWebViewProxyDelegate.h; sourceTree = "<group>"; };
 		89DC9B371F38741600CC6571 /* EasyJSWebViewProxyDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSWebViewProxyDelegate.m; sourceTree = "<group>"; };
 		89DC9B381F38741600CC6571 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		89ED90931F8B4A2E00338974 /* WJBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseWebViewController.h; sourceTree = "<group>"; };
+		89ED90941F8B4A2E00338974 /* WJBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJBaseWebViewController.m; sourceTree = "<group>"; };
+		89ED90961F8B4F3A00338974 /* WJWebTestFile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WJWebTestFile.html; sourceTree = "<group>"; };
+		89ED90981F8B5A4D00338974 /* WJWebviewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJWebviewDelegate.h; sourceTree = "<group>"; };
+		89ED90991F8B5A4D00338974 /* WJWebviewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJWebviewDelegate.m; sourceTree = "<group>"; };
 		89FC4E441F04D56900D81B65 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		89FC4E451F04D56900D81B65 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
 		89FE23841EC9A09A00AB6AE1 /* CCodeTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCodeTestVC.h; sourceTree = "<group>"; };
@@ -349,6 +357,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				89ED90921F8B492C00338974 /* WebViewJavascriptBridge */,
 				89B40B551F77DC2C00DA138D /* 时间处理 */,
 				892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */,
 				89894DB61F3AB2C300912D22 /* THRIFT_DEMO */,
@@ -809,6 +818,18 @@
 			path = EasyJSEWebview;
 			sourceTree = "<group>";
 		};
+		89ED90921F8B492C00338974 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				89ED90931F8B4A2E00338974 /* WJBaseWebViewController.h */,
+				89ED90941F8B4A2E00338974 /* WJBaseWebViewController.m */,
+				89ED90981F8B5A4D00338974 /* WJWebviewDelegate.h */,
+				89ED90991F8B5A4D00338974 /* WJWebviewDelegate.m */,
+				89ED90961F8B4F3A00338974 /* WJWebTestFile.html */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		89FE237D1EC99FFB00AB6AE1 /* C代码复习 */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +940,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89ED90971F8B4F3A00338974 /* WJWebTestFile.html in Resources */,
 				893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */,
 				890FBA701EB040A800C10AE5 /* AlipaySDK.bundle in Resources */,
 				890E445D1EA89B5B00EB2BC2 /* LaunchScreen.storyboard in Resources */,
@@ -999,6 +1021,7 @@
 				897895941EFA4DD300623896 /* LogManager.m in Sources */,
 				8978958C1EFA439500623896 /* MaiDianViewController.m in Sources */,
 				890FBA751EB040A800C10AE5 /* base64.m in Sources */,
+				89ED909A1F8B5A4D00338974 /* WJWebviewDelegate.m in Sources */,
 				892E7CBF1F0245B2006C7106 /* MaiDianDataModel.m in Sources */,
 				892E7CBB1F01F104006C7106 /* UIConfigManager.m in Sources */,
 				8955A0C41ED2EA2500BE765C /* UIViewAnimationVC.m in Sources */,
@@ -1014,6 +1037,7 @@
 				893442321F08933C000E1F55 /* LWBaseViewController.m in Sources */,
 				89726D5F1F26CDEA00A39FA0 /* LWBaseWebViewController.m in Sources */,
 				89B585811EADA1F100C1F73D /* RSAEncryptorVC.m in Sources */,
+				89ED90951F8B4A2F00338974 /* WJBaseWebViewController.m in Sources */,
 				892AF7081F642CF300E9CFE2 /* UIPickerView+malPicker.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,
 				89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */,

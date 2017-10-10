@@ -20,6 +20,7 @@ PODS:
   - FMDB/standard (2.6.2)
   - Masonry (1.0.2)
   - MBProgressHUD (0.8)
+  - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - FMDB (= 2.6.2)
   - Masonry (= 1.0.2)
   - MBProgressHUD (= 0.8)
+  - WebViewJavascriptBridge (= 6.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -34,7 +36,8 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 8688c331cb64702283be37ab8d7d329cdd25f251
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: 9ccfdc361633b3d398c45b61a31628c886103435
+PODFILE CHECKSUM: a6e5e362495de7306fc947beb94c6a8885d66e38
 
 COCOAPODS: 1.1.1
