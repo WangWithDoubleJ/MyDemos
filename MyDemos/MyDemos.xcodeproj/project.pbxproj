@@ -900,7 +900,7 @@
 				TargetAttributes = {
 					890E44491EA89B5B00EB2BC2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = YL28P9476M;
+						DevelopmentTeam = F965L98XNN;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1194,9 +1194,9 @@
 			baseConfigurationReference = 62CC227301B09FBDA2727789 /* Pods-MyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
-				DEVELOPMENT_TEAM = YL28P9476M;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				DEVELOPMENT_TEAM = F965L98XNN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyDemos/支付宝",
@@ -1213,10 +1213,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.demopush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbdedf01-0f9e-4c01-b9f8-6da685c2444f";
-				PROVISIONING_PROFILE_SPECIFIER = SZYiZhangTongProfile;
+				PROVISIONING_PROFILE = "3ff136c5-2c5a-4ca1-a552-6698be09d1e7";
+				PROVISIONING_PROFILE_SPECIFIER = pingAnArPlayerDistri;
 			};
 			name = Debug;
 		};
@@ -1225,9 +1225,9 @@
 			baseConfigurationReference = 2C9F9B3CE9DC7E2C69313987 /* Pods-MyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
-				DEVELOPMENT_TEAM = YL28P9476M;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				DEVELOPMENT_TEAM = F965L98XNN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyDemos/支付宝",
@@ -1244,10 +1244,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.demopush;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cbdedf01-0f9e-4c01-b9f8-6da685c2444f";
-				PROVISIONING_PROFILE_SPECIFIER = SZYiZhangTongProfile;
+				PROVISIONING_PROFILE = "3ff136c5-2c5a-4ca1-a552-6698be09d1e7";
+				PROVISIONING_PROFILE_SPECIFIER = pingAnArPlayerDistri;
 			};
 			name = Release;
 		};
