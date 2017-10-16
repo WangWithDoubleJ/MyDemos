@@ -360,9 +360,7 @@
 				89ED90921F8B492C00338974 /* WebViewJavascriptBridge */,
 				89B40B551F77DC2C00DA138D /* 时间处理 */,
 				892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */,
-				89894DB61F3AB2C300912D22 /* THRIFT_DEMO */,
 				896645E41F21E16A00DCCF8B /* WebAndOC */,
-				895B8F1D1F0F12AF00E7F658 /* temp */,
 				893442281F0891A4000E1F55 /* 谓词(NSPredicate) */,
 				89CC58E01EDE711F0026365D /* MyDemos.entitlements */,
 				89471F781F03B056000F04DA /* copy和strong的区别 */,
@@ -370,11 +368,9 @@
 				8955A0C11ED2E9B800BE765C /* 动画 */,
 				895C94C31ECE86EE005B299C /* runtime交换方法实现 */,
 				89FE237D1EC99FFB00AB6AE1 /* C代码复习 */,
-				891D5D981EBADB81007605DA /* NSURLProtocol */,
 				890CD8C71EB81CDD007B1169 /* FMDB */,
 				89B585821EADA25B00C1F73D /* 支付宝 */,
 				89B585771EADA1F100C1F73D /* RSA加密 */,
-				893C93171F02A34000303C01 /* 国际化 */,
 				892C46401F0545D8003B6E4B /* UITabBarController */,
 				8977BB9A1F09CA5900AE7B63 /* 其他 */,
 				890E44501EA89B5B00EB2BC2 /* AppDelegate.h */,
@@ -550,13 +546,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		891D5D981EBADB81007605DA /* NSURLProtocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NSURLProtocol;
-			sourceTree = "<group>";
-		};
 		8928D4861F00F1C60006DFC9 /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,13 +618,6 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		893C93171F02A34000303C01 /* 国际化 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "国际化";
-			sourceTree = "<group>";
-		};
 		89471F781F03B056000F04DA /* copy和strong的区别 */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,13 +634,6 @@
 				8955A0C31ED2EA2500BE765C /* UIViewAnimationVC.m */,
 			);
 			path = "动画";
-			sourceTree = "<group>";
-		};
-		895B8F1D1F0F12AF00E7F658 /* temp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = temp;
 			sourceTree = "<group>";
 		};
 		895C94C31ECE86EE005B299C /* runtime交换方法实现 */ = {
@@ -754,13 +729,6 @@
 				89FC4E451F04D56900D81B65 /* UIButton+Addition.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		89894DB61F3AB2C300912D22 /* THRIFT_DEMO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = THRIFT_DEMO;
 			sourceTree = "<group>";
 		};
 		89B40B551F77DC2C00DA138D /* 时间处理 */ = {
@@ -1196,6 +1164,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F965L98XNN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1227,6 +1196,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ping An Insurance (Group) Company of China, Ltd.";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F965L98XNN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
