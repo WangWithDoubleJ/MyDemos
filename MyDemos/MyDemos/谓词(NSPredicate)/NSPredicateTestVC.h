@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface NSPredicateTestVC : LWBaseViewController
+@interface NSPredicateTestVC : UIViewController
 
 @end

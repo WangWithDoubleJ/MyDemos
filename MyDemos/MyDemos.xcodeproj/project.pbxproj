@@ -66,7 +66,6 @@
 		89B585FC1EADD43600C1F73D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FB1EADD43600C1F73D /* CoreMotion.framework */; };
 		89B585FE1EADD53200C1F73D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B585FD1EADD53200C1F73D /* libc++.tbd */; };
 		89B586021EADD69D00C1F73D /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B586011EADD69D00C1F73D /* ALViewController.m */; };
-		89C9ABFA1F9494E500CC6E4A /* LWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C9ABF81F9494E500CC6E4A /* LWBaseViewController.m */; };
 		89CC58E21EDE96670026365D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CC58E11EDE96670026365D /* UserNotifications.framework */; };
 		89DC9B391F38741600CC6571 /* easyjs-inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DC9B311F38741600CC6571 /* easyjs-inject.js */; };
 		89DC9B3A1F38741600CC6571 /* EasyJSDataFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DC9B331F38741600CC6571 /* EasyJSDataFunction.m */; };
@@ -266,8 +265,6 @@
 		89B585FD1EADD53200C1F73D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		89B586001EADD69D00C1F73D /* ALViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
 		89B586011EADD69D00C1F73D /* ALViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
-		89C9ABF81F9494E500CC6E4A /* LWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBaseViewController.m; sourceTree = "<group>"; };
-		89C9ABF91F9494E500CC6E4A /* LWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBaseViewController.h; sourceTree = "<group>"; };
 		89CC58E01EDE711F0026365D /* MyDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDemos.entitlements; sourceTree = "<group>"; };
 		89CC58E11EDE96670026365D /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		89DC9B311F38741600CC6571 /* easyjs-inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "easyjs-inject.js"; sourceTree = "<group>"; };
@@ -377,8 +374,6 @@
 				890E44511EA89B5B00EB2BC2 /* AppDelegate.m */,
 				890E44531EA89B5B00EB2BC2 /* ViewController.h */,
 				890E44541EA89B5B00EB2BC2 /* ViewController.m */,
-				89C9ABF91F9494E500CC6E4A /* LWBaseViewController.h */,
-				89C9ABF81F9494E500CC6E4A /* LWBaseViewController.m */,
 				890E44561EA89B5B00EB2BC2 /* Main.storyboard */,
 				890E44591EA89B5B00EB2BC2 /* Assets.xcassets */,
 				890E445B1EA89B5B00EB2BC2 /* LaunchScreen.storyboard */,
@@ -999,7 +994,6 @@
 				890FBA761EB040A800C10AE5 /* NSDataEx.m in Sources */,
 				89DC9B3A1F38741600CC6571 /* EasyJSDataFunction.m in Sources */,
 				890E44551EA89B5B00EB2BC2 /* ViewController.m in Sources */,
-				89C9ABFA1F9494E500CC6E4A /* LWBaseViewController.m in Sources */,
 				89471F7B1F03B08C000F04DA /* CSViewController.m in Sources */,
 				8934422B1F0891D0000E1F55 /* NSPredicateTestVC.m in Sources */,
 				890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */,
