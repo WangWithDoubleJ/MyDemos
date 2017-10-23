@@ -35,6 +35,7 @@
 }
 
 - (void)UIConfig{
+    self.tableView.backgroundColor = [UIColor redColor];
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:@"" forKey:@"status"];
@@ -44,19 +45,7 @@
     self.funcs = @[@{@"title":@"最新",@"methodName":@"rsa_viewControllerJump"},
                    @{@"title":@"RSA加密",@"methodName":@"rsa_viewControllerJump"},
                    @{@"title":@"支付宝",@"methodName":@"zifubao_viewControllerJump"},
-                   @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"},
-                   @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
-                   @{@"title":@"C代码测试",@"methodName":@"CCodeTest_viewControllerJump"},
-                   @{@"title":@"NSURLProtocolDemo",@"methodName":@"NSURLProtocol_viewControllerJump"},
-                   @{@"title":@"runtime交换方法实现",@"methodName":@"swizzMethod_viewControllerJump"},
-                   @{@"title":@"动画",@"methodName":@"animation_viewControllerJump"},
-                   @{@"title":@"埋点实现",@"methodName":@"maidian_viewControllerJump"},
-                   @{@"title":@"copy与strong的区别",@"methodName":@"CSDiff_viewControllerJump"},
-                   @{@"title":@"UITabBarController",@"methodName":@"tabBarVC_viewControllerJump"},
-                   @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"},
-                   @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"},
-                   @{@"title":@"跳转到其他APP",@"methodName":@"jumpToAnOtherApp"},
-                   @{@"title":@"城市选择器",@"methodName":@"jumpToCitySelector"}];
+                   @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
