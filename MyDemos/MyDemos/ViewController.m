@@ -45,6 +45,9 @@
     self.funcs = @[@{@"title":@"最新",@"methodName":@"rsa_viewControllerJump"},
                    @{@"title":@"RSA加密",@"methodName":@"rsa_viewControllerJump"},
                    @{@"title":@"支付宝",@"methodName":@"zifubao_viewControllerJump"},
+                   @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"},
+                   @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"},
+                   @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"},
                    @{@"title":@"FMDB测试",@"methodName":@"FMDB_viewControllerJump"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
