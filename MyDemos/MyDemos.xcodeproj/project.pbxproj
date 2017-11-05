@@ -1156,8 +1156,8 @@
 			baseConfigurationReference = 62CC227301B09FBDA2727789 /* Pods-MyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1176,10 +1176,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.shenzhen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerTestFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e35fb68b-01d7-4b2b-ba79-966d73bcdfa2";
-				PROVISIONING_PROFILE_SPECIFIER = CityYZTProfile;
+				PROVISIONING_PROFILE = "02e614b2-0a83-4dad-adc8-c3dd0b9c89be";
+				PROVISIONING_PROFILE_SPECIFIER = arplayerTestFlightProfile;
 			};
 			name = Debug;
 		};
@@ -1188,8 +1188,8 @@
 			baseConfigurationReference = 2C9F9B3CE9DC7E2C69313987 /* Pods-MyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1208,10 +1208,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.shenzhen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerTestFlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e35fb68b-01d7-4b2b-ba79-966d73bcdfa2";
-				PROVISIONING_PROFILE_SPECIFIER = CityYZTProfile;
+				PROVISIONING_PROFILE = "02e614b2-0a83-4dad-adc8-c3dd0b9c89be";
+				PROVISIONING_PROFILE_SPECIFIER = arplayerTestFlightProfile;
 			};
 			name = Release;
 		};
