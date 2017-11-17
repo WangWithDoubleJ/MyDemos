@@ -19,6 +19,7 @@
 #import "NSPredicateTestVC.h"
 #import "LWBaseWebViewController.h"
 #import "CitySelectorController.h"
+#import "SendMailViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray *funcs;///<所有功能模块
@@ -56,7 +57,8 @@
                    @{@"title":@"谓词",@"methodName":@"predicateTestVC_viewControllerJump"},
                    @{@"title":@"EasyWebviewDemo",@"methodName":@"EasyWebviewTestVC_viewControllerJump"},
                    @{@"title":@"跳转到其他APP",@"methodName":@"jumpToAnOtherApp"},
-                   @{@"title":@"城市选择器",@"methodName":@"jumpToCitySelector"}];
+                   @{@"title":@"城市选择器",@"methodName":@"jumpToCitySelector"},
+                   @{@"title":@"邮件",@"methodName":@"jumpToEMailSelector"}];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -232,6 +234,12 @@
 
 - (void) jumpToCitySelector{
     CitySelectorController *vc = [CitySelectorController new];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+- (void) jumpToEMailSelector{
+    SendMailViewController *vc = [SendMailViewController new];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

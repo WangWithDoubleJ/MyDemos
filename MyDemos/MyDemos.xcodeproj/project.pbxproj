@@ -29,6 +29,8 @@
 		890FBA781EB040A800C10AE5 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA6D1EB040A800C10AE5 /* RSADataSigner.m */; };
 		890FBA791EB040A800C10AE5 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */; };
 		890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */; };
+		8910D5B61FBEC62E001892E0 /* SendMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910D5B41FBEC62E001892E0 /* SendMailViewController.m */; };
+		8910D5B71FBEC62E001892E0 /* SendMailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8910D5B51FBEC62E001892E0 /* SendMailViewController.xib */; };
 		8928D48B1F0108990006DFC9 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8928D48A1F0108990006DFC9 /* RequestManager.m */; };
 		892AF7021F63FF7000E9CFE2 /* PAAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 892AF7011F63FF7000E9CFE2 /* PAAddressPicker.m */; };
 		892AF7051F63FFC600E9CFE2 /* CitySelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892AF7041F63FFC600E9CFE2 /* CitySelectorController.m */; };
@@ -203,6 +205,9 @@
 		890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
 		890FBA7B1EB08BFE00C10AE5 /* APAuthV2Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthV2Info.h; sourceTree = "<group>"; };
 		890FBA7C1EB08BFE00C10AE5 /* APAuthV2Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAuthV2Info.m; sourceTree = "<group>"; };
+		8910D5B31FBEC62E001892E0 /* SendMailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendMailViewController.h; sourceTree = "<group>"; };
+		8910D5B41FBEC62E001892E0 /* SendMailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMailViewController.m; sourceTree = "<group>"; };
+		8910D5B51FBEC62E001892E0 /* SendMailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMailViewController.xib; sourceTree = "<group>"; };
 		8928D4851F00EE6D0006DFC9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8928D4871F00F2220006DFC9 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8928D4891F0108990006DFC9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
@@ -354,6 +359,7 @@
 		890E444C1EA89B5B00EB2BC2 /* MyDemos */ = {
 			isa = PBXGroup;
 			children = (
+				8910D5B21FBEC321001892E0 /* 发送邮件 */,
 				89ED90921F8B492C00338974 /* WebViewJavascriptBridge */,
 				89B40B551F77DC2C00DA138D /* 时间处理 */,
 				892AF6FF1F63FF1600E9CFE2 /* 城市选择器 */,
@@ -539,6 +545,16 @@
 				890FBA6F1EB040A800C10AE5 /* RSADataVerifier.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8910D5B21FBEC321001892E0 /* 发送邮件 */ = {
+			isa = PBXGroup;
+			children = (
+				8910D5B31FBEC62E001892E0 /* SendMailViewController.h */,
+				8910D5B41FBEC62E001892E0 /* SendMailViewController.m */,
+				8910D5B51FBEC62E001892E0 /* SendMailViewController.xib */,
+			);
+			path = "发送邮件";
 			sourceTree = "<group>";
 		};
 		8928D4861F00F1C60006DFC9 /* Define */ = {
@@ -907,6 +923,7 @@
 				893A81F01EFCC8CA003A2D14 /* LWLogInfo.plist in Resources */,
 				890FBA701EB040A800C10AE5 /* AlipaySDK.bundle in Resources */,
 				890E445D1EA89B5B00EB2BC2 /* LaunchScreen.storyboard in Resources */,
+				8910D5B71FBEC62E001892E0 /* SendMailViewController.xib in Resources */,
 				89DC9B391F38741600CC6571 /* easyjs-inject.js in Resources */,
 				890E445A1EA89B5B00EB2BC2 /* Assets.xcassets in Resources */,
 				89726D601F26CDEA00A39FA0 /* webviewTest.html in Resources */,
@@ -1002,6 +1019,7 @@
 				89ED90951F8B4A2F00338974 /* WJBaseWebViewController.m in Sources */,
 				892AF7081F642CF300E9CFE2 /* UIPickerView+malPicker.m in Sources */,
 				89B585801EADA1F100C1F73D /* RSAEncryptor.m in Sources */,
+				8910D5B61FBEC62E001892E0 /* SendMailViewController.m in Sources */,
 				89FE23861EC9A09A00AB6AE1 /* CCodeTestVC.m in Sources */,
 				89726D631F26CE5200A39FA0 /* MyTestEasyJSWebVC.m in Sources */,
 				890FBA7D1EB08BFE00C10AE5 /* APAuthV2Info.m in Sources */,
@@ -1156,8 +1174,8 @@
 			baseConfigurationReference = 62CC227301B09FBDA2727789 /* Pods-MyDemos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1176,10 +1194,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerTestFlight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.shenzhen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02e614b2-0a83-4dad-adc8-c3dd0b9c89be";
-				PROVISIONING_PROFILE_SPECIFIER = arplayerTestFlightProfile;
+				PROVISIONING_PROFILE = "9743d5aa-efbb-492b-8050-f03a611b05e6";
+				PROVISIONING_PROFILE_SPECIFIER = CityYZTProfile;
 			};
 			name = Debug;
 		};
@@ -1188,8 +1206,8 @@
 			baseConfigurationReference = 2C9F9B3CE9DC7E2C69313987 /* Pods-MyDemos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ping an health management co., LTD (YL28P9476M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hailong han (63852P9WZ9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hailong han (63852P9WZ9)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = YL28P9476M;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1208,10 +1226,10 @@
 					"$(PROJECT_DIR)/MyDemos/支付宝/AlipaySDK",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.arplayerTestFlight;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingan.shenzhen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02e614b2-0a83-4dad-adc8-c3dd0b9c89be";
-				PROVISIONING_PROFILE_SPECIFIER = arplayerTestFlightProfile;
+				PROVISIONING_PROFILE = "9743d5aa-efbb-492b-8050-f03a611b05e6";
+				PROVISIONING_PROFILE_SPECIFIER = CityYZTProfile;
 			};
 			name = Release;
 		};
